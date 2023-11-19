@@ -7,7 +7,7 @@
 
 "Parental Peace" adalah aplikasi mobile yang dirancang khusus untuk mendukung orangtua baru dalam perawatan bayi mereka. Aplikasi ini menyediakan berbagai fitur yang memungkinkan pengguna untuk merespons kebutuhan bayi dengan lebih baik, meningkatkan koneksi emosional antara orangtua dan bayi, dan memberikan sumber daya informatif tentang perawatan bayi.
 
-## Authors
+## Authors by Team ID: `CH2-PS442`
 | Name | Bangkit-ID     | Github-Profile                       |
 | :-------- | :------- | :-------------------------------- |
 | I Putu Yogi Prasetya Dharmawan      | `M014BSY1124` | [@YogiPrasetyaD](https://github.com/YogiPrasetyaD) |
