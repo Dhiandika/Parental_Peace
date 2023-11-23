@@ -13,7 +13,7 @@
 | I Putu Yogi Prasetya Dharmawan      | `M014BSY1124` | [@YogiPrasetyaD](https://github.com/YogiPrasetyaD) |
 | Mhd Iqbal Pratama      | `M302BSY0044 ` | [@MhdIqbalPratama](https://github.com/MhdIqbalPratama) |
 | Luthfi Dhiya Ramadhan      | `M237BSY0835 ` | [@LuthfiDhiyaRamadhan](https://github.com/LuthfiDhiyaRamadhan) |
-| I Putu Dhiandika Aditya Permana      | `C014BSY4164` | [@YogiPrasetyaD](https://github.com/YogiPrasetyaD) |
+| I Putu Dhiandika Aditya Permana      | `C014BSY4164` |[@Dhiandika](https://github.com/Dhiandika)|
 | Yoga Pratama      | `C116BSY4186 ` | [@Yoama2](https://github.com/Yoama2) |
 | I Wayan Priatna      | `A014BSY2686 ` | [@priatna1054](https://github.com/priatna1054) |
 
