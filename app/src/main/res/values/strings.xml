@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Parental Peace App</string>
+    <string name="welcome_to_">Welcome To Parental Peace</string>
+    <string name="understand_">Understand Your Baby Better With Us</string>
+    <string name="please_choo">Please Choose And Continue</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="back_button">Back</string>
+    <string name="name_input">Name</string>
+    <string name="email_input">Email</string>
+    <string name="number_input">Mobile Number</string>
+    <string name="password_input">Password</string>
+    <string name="retype_input">Retype Password</string>
+    <string name="crt_account_button">Create Account</string>
+    <string name="ishave_account">Already have an account?</string>
+    <string name="parental_peace">Parental Peace</string>
+    <string name="provide_word">Provide comfort to your little baby</string>
+</resources>

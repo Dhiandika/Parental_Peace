@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ParentalPeaceApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here -->
+        <item name="colorPrimary">@color/greenPrimary</item>
+        <item name="colorPrimaryVariant">@color/greenPrimaryVariant</item>
+        <item name="colorSecondary">@color/blueSecondary</item>
+        <item name="colorSecondaryVariant">@color/blueSecondaryVariant</item>
+        <!-- Add more color customization as needed -->
+
+    </style>
+
+    <style name="Theme.ParentalPeaceApp" parent="Base.Theme.ParentalPeaceApp" />
+</resources>
