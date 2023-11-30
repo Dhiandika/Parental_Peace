@@ -1,0 +1,20 @@
+{
+  "name": "parental_peace",
+  "version": "1.0.0",
+  "description": "Parental Peace adalah aplikasi mobile yang dirancang khusus untuk mendukung orangtua baru dalam perawatan bayi mereka. Aplikasi ini menyediakan berbagai fitur yang memungkinkan pengguna untuk merespons kebutuhan bayi dengan lebih baik, meningkatkan koneksi emosional antara orangtua dan bayi, dan memberikan sumber daya informatif tentang perawatan bayi.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start-dev": "nodemon index.js"
+  },
+  "author": "parental_peace",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.2",
+    "firebase-admin": "^11.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
