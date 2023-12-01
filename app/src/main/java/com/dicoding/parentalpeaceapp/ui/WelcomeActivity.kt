@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.ImageButton
 import com.dicoding.parentalpeaceapp.R
 
+@Suppress("DEPRECATION")
 class WelcomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,5 +28,12 @@ class WelcomeActivity : AppCompatActivity() {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    // Override onBackPressed to exit the app
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finishAffinity() // Menutup semua activity yang terkait dengan task saat ini
     }
 }

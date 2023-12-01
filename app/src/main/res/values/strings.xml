@@ -23,4 +23,17 @@
     <string name="title_other">Other</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="record">Record</string>
+    <string name="optional_features">Optional Features</string>
+    <string name="information_recommendations">Information Recommendations</string>
+    <string name="consultation">Consultation</string>
+    <string name="history_transaction">Transaction History</string>
+    <string name="information">Information</string>
+    <string name="no_notification">No notification yet</string>
+    <string name="change">Edit</string>
+    <string name="age_input">Age\t\t\t\t:</string>
+    <string name="gender_input">Gender\t:</string>
+    <string name="logout">Log Out</string>
+    <string name="language">Language</string>
+    <string name="delete_account">Delete_Acount</string>
 </resources>

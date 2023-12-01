@@ -7,17 +7,153 @@
     android:background="@drawable/home_bg"
     tools:context=".ui.ui.home.HomeFragment">
 
+    <ImageView
+        android:id="@+id/homelgView"
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no" />
+
     <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
+        android:id="@+id/title_home"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/parental_peace"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAppearance="@style/font18"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/feature1_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/optional_features"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textAppearance="@style/font14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homelgView" />
+
+    <ImageView
+        android:id="@+id/iv_item1"
+        android:layout_width="340dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/item_box_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feature1_tittle"
+        android:importantForAccessibility="no" />
+
+    <ImageButton
+        android:id="@+id/imb_consultation"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/consul_btn_img"
+        android:contentDescription="@string/consultation"
+        app:layout_constraintEnd_toStartOf="@+id/imb_transaction"
+        app:layout_constraintStart_toStartOf="@+id/iv_item1"
+        app:layout_constraintTop_toTopOf="@+id/iv_item1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/pop_medium"
+        android:text="@string/consultation"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/imb_consultation"
+        app:layout_constraintStart_toStartOf="@+id/imb_consultation"
+        app:layout_constraintTop_toBottomOf="@+id/imb_consultation" />
+
+    <ImageButton
+        android:id="@+id/imb_transaction"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/transaction_btn_img"
+        android:contentDescription="@string/history_transaction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_item1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/pop_medium"
+        android:text="@string/history_transaction"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_item1"
+        app:layout_constraintStart_toStartOf="@+id/iv_item1"
+        app:layout_constraintTop_toBottomOf="@+id/imb_transaction" />
+
+    <ImageButton
+        android:id="@+id/imb_information"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/info_btn_img"
+        android:contentDescription="@string/information"
+        app:layout_constraintEnd_toEndOf="@+id/iv_item1"
+        app:layout_constraintStart_toEndOf="@+id/imb_transaction"
+        app:layout_constraintTop_toTopOf="@+id/iv_item1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/pop_medium"
+        android:text="@string/information"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/imb_information"
+        app:layout_constraintStart_toStartOf="@+id/imb_information"
+        app:layout_constraintTop_toBottomOf="@+id/imb_information" />
+
+    <TextView
+        android:id="@+id/feature2_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/information_recommendations"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textAppearance="@style/font14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item1" />
+
+    <ImageView
+        android:id="@+id/iv_item2"
+        android:layout_width="340dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/item_box_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feature2_tittle"
+        android:importantForAccessibility="no" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="320dp"
+        android:layout_height="340dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_item2"
+        app:layout_constraintEnd_toEndOf="@+id/iv_item2"
+        app:layout_constraintStart_toStartOf="@+id/iv_item2"
+        app:layout_constraintTop_toTopOf="@+id/iv_item2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
