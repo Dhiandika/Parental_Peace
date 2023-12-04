@@ -1,0 +1,35 @@
+gcloud builds submit \
+  --tag gcr.io/$GOOGLE_CLOUD_PROJECT/pdf-converter
+
+  gcloud run deploy pdf-converter \
+  --image gcr.io/$GOOGLE_CLOUD_PROJECT/pdf-converter \
+  --platform managed \
+  --region us-central1 \
+  --no-allow-unauthenticated \
+  --max-instances=1
+
+
+gcloud builds submit --tag gcr.io/$GOOGLE_CLOUD_PROJECT/tes-firebase
+
+gcloud run deploy --image gcr.io/$GOOGLE_CLOUD_PROJECT/klin-server-backend
+--allow-unauthenticated 
+--region=asia-southeast2
+
+npm init -y
+npm install firebase-admin
+npm install @hapi/hapi
+
+GET /users
+POST /users
+DELETE /users/{id}
+
+GET /usaha
+POST /usaha
+DELETE /usaha
+
+GET /transaksi
+POST /transaksi
+DELETE /transaksi
+
+gcloud config get-value project
+gcloud config set project PROJECT_ID

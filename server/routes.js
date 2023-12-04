@@ -1,12 +1,22 @@
 // Import dari Handler
+
+const { getAll, deleteAll } = require("../server/handler/alldata");
+
 const {
-    getAll,
-    deleteAll,
+    getAllArticles,
+    getArticle,
+    addArticle,
+    updateArticle,
+    deleteArticle,
+} = require("./handler/artikeldata");
+
+const {
     getAllUsers,
-    addUser,
-    updateUser,
-    deleteUser,
-} = require("./handler");
+    getUsers,
+    makeUsers,
+    editUsers,
+    deleteUsers,
+} = require("./handler/userdata");
 
 const routes = [
     // all - Ambil Seluruh Data Database
@@ -21,35 +31,103 @@ const routes = [
         path: "/",
         handler: deleteAll,
     },
-    // getAllUsers - Mengambil Semua Data Pengguna dari Firestore
+    // users - Ambil Seluruh Data Users
     {
         method: "GET",
         path: "/users",
         handler: getAllUsers,
     },
 
-    // saveUser - Menyimpan Data Pengguna ke Firestore
+    // users - Ambil Data Users Tertentu
+    {
+        method: "GET",
+        path: "/users/{id}",
+        handler: getUsers,
+    },
+
+    // users - Buat Data Users Baru
     {
         method: "POST",
         path: "/users",
-        handler: addUser,
+        handler: makeUsers,
+        options: {
+            payload: {
+                maxBytes: 10485760,
+                multipart: true,
+                output: 'stream'
+            },
+        },
     },
 
-    // updateUser - Memperbarui Data Pengguna di Firestore
+    // users - Edit Data Users Tertentu
     {
         method: "PUT",
         path: "/users/{id}",
-        handler: updateUser,
+        handler: editUsers,
+        options: {
+            payload: {
+                maxBytes: 10485760,
+                multipart: true,
+                output: 'stream'
+            },
+        },
     },
 
-    // deleteUser - Menghapus Data Pengguna dari Firestore
+    // users - Hapus Data Users Tertentu
     {
         method: "DELETE",
         path: "/users/{id}",
-        handler: deleteUser,
+        handler: deleteUsers,
+    },
+    // getAllArticles - Mengambil Semua Data Artikel dari Firestore
+    {
+        method: "GET",
+        path: "/articles",
+        handler: getAllArticles,
+    },
+
+    // getArticle - Ambil Data Artikel Tertentu
+    {
+        method: "GET",
+        path: "/articles/{id}",
+        handler: getArticle,
+    },
+
+    // addArticle - Menyimpan Data Artikel ke Firestore
+    {
+        method: "POST",
+        path: "/articles",
+        handler: addArticle,
+        options: {
+            payload: {
+                maxBytes: 10485760,
+                multipart: true,
+                output: 'stream'
+            },
+        },
+    },
+
+    // updateArticle - Memperbarui Data Artikel di Firestore
+    {
+        method: "PUT",
+        path: "/articles/{id}",
+        handler: updateArticle,
+        options: {
+            payload: {
+                maxBytes: 10485760,
+                multipart: true,
+                output: 'stream'
+            },
+        },
+    },
+
+    // deleteArticle - Menghapus Data Artikel dari Firestore
+    {
+        method: "DELETE",
+        path: "/articles/{id}",
+        handler: deleteArticle,
     },
 ];
-
 
 // Export Routes
 module.exports = routes;

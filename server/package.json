@@ -11,6 +11,7 @@
   "author": "parental_peace",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/storage": "^7.7.0",
     "@hapi/hapi": "^21.3.2",
     "firebase-admin": "^11.11.0"
   },

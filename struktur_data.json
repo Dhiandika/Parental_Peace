@@ -1,0 +1,29 @@
+{
+    "users": [
+        {
+            "id": "u1701142120479",
+            "users_email": "yodya@bangkit.com",
+            "users_name": "Yodya Mahesa",
+            "users_phone": "089123456789",
+            "users_role": "costumer",
+            "users_picture": "url"
+        },
+        {
+            "id": "u1701142131311",
+            "users_email": "mananda@bangkit.com",
+            "users_name": "Mananda Bangkit",
+            "users_phone": "089123456789",
+            "users_role": "dokter",
+            "users_picture": "url"
+        },
+        {
+            "id": "u1701142134135",
+            "users_email": "artur@bangkit.com",
+            "users_name": "Jiyesta Arturito",
+            "users_phone": "089123456789",
+            "users_role": "admin",
+            "users_picture": "url"
+        }
+    ]
+    
+}
