@@ -88,22 +88,26 @@ Retrieve information about all users.
 {
     "users": [
         {
-            "users_email": "yodya1532626336262@gmail.com",
-            "users_role": "user",
-            "users_id": "u1701666978475",
-            "firebase_uid": "1wFq80ZwfnTgAAju7pKPSuzdqdY2",
-            "users_picture": "https://storage.googleapis.com/klinbangkit2023/users/u1701666978475.jpg",
-            "users_name": "Yodya Mahesa",
-            "users_phone": "08961012345"
+            "u1702038833979": {
+                "users_email": "npemburu321@gmail.com",
+                "users_role": "user",
+                "users_name": "Dhiandika",
+                "users_id": "u1702038833979",
+                "users_phone": "081339035284",
+                "firebase_uid": "Fo7ekvOTvVZcf4BVbxzmypAZGOV2",
+                "users_picture": "https://storage.googleapis.com/parental-peace2023/users/u1702038833979.png"
+            }
         },
         {
-            "users_email": "gintingherisanjaya@gmail.com",
-            "users_role": "user",
-            "users_name": "Heri",
-            "users_id": "u1702048723322",
-            "users_phone": "12357900099",
-            "firebase_uid": "kJdNqMLEPJeAdJVrDTayCIKkKYt2",
-            "users_picture": "https://storage.googleapis.com/klinbangkit2023/users/u1702048723322.png"
+            "u1702039045742": {
+                "users_email": "npemburu21@gmail.com",
+                "users_role": "user",
+                "users_name": "Dhiandika",
+                "users_id": "u1702039045742",
+                "users_phone": "081339035284",
+                "firebase_uid": "QcGtMCwBdrehn94spqbgbpaXYUQ2",
+                "users_picture": "https://storage.googleapis.com/parental-peace2023/users/u1702039045742.png"
+            }
         }
     ]
 }
