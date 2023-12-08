@@ -1,4 +1,4 @@
-![Logo](https://cdn.discordapp.com/attachments/964505604657909760/1182373152379125770/Baner.png?ex=658475ce&is=657200ce&hm=15feec976516933bcbb6d9149ae59a3e1c7378ed8599d44574b6ccd71c5573fa&)
+![Logo](https://cdn.discordapp.com/attachments/964505604657909760/1182518896784318525/Frame_5.png?ex=6584fd8b&is=6572888b&hm=b9a4902e9216bdea394dbf10e30c9c0d7b47b245a08d7476db72c3bbcf7e1a6a&)
 
 
 # Parental Peace : Reduce Baby Blues by Guidance and Consultation
