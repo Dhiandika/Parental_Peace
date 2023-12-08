@@ -1,5 +1,6 @@
 
-![Logo](https://cdn.discordapp.com/attachments/964505604657909760/1175754312199184484/Frame_3.png?ex=656c6188&is=6559ec88&hm=3e7eb6424c9cc12da307cb016445e1fbc97f1d557fac0aa268dadddfced3de40&)
+![Logo](https://github.com/Dhiandika/Parental_Peace/assets/91781422/94606bcf-1014-4fd4-b43b-25fbee94031c)
+)
 
 
 # Parental Peace : Reduce Baby Blues by Guidance and Consultation
