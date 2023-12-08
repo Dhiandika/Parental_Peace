@@ -1,6 +1,8 @@
 
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://alpha-parental-peace.et.r.appspot.com/)
 ![Logo](https://github.com/Dhiandika/Parental_Peace/assets/91781422/94606bcf-1014-4fd4-b43b-25fbee94031c)
-)
+
 
 
 # Parental Peace : Reduce Baby Blues by Guidance and Consultation
@@ -19,9 +21,6 @@
 | I Wayan Priatna      | `A014BSY2686 ` | [@priatna1054](https://github.com/priatna1054) |
 
 
-## Brand Guidelines
-
-![App Screenshot](https://cdn.discordapp.com/attachments/964505604657909760/1175747943064674314/Parental_Peace_Logo_21_page-0001_1.png?ex=656c5b99&is=6559e699&hm=106236279d5297665f2e539f7da073dfdaefecb98f3f62634c278dadffb727eb&)
 
 
 <h3 align="left">Languages and Tools:</h3>
