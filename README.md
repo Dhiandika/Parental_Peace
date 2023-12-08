@@ -1,10 +1,3 @@
-![Logo](https://cdn.discordapp.com/attachments/964505604657909760/1182518896784318525/Frame_5.png?ex=6584fd8b&is=6572888b&hm=b9a4902e9216bdea394dbf10e30c9c0d7b47b245a08d7476db72c3bbcf7e1a6a&)
-
-
-# Parental Peace : Reduce Baby Blues by Guidance and Consultation
-
-
-"Parental Peace" adalah aplikasi mobile yang dirancang khusus untuk mendukung orangtua baru dalam perawatan bayi mereka. Aplikasi ini menyediakan berbagai fitur yang memungkinkan pengguna untuk merespons kebutuhan bayi dengan lebih baik, meningkatkan koneksi emosional antara orangtua dan bayi, dan memberikan sumber daya informatif tentang perawatan bayi.
 
 ## Authors by Team ID: `CH2-PS442`
 | Name | Bangkit-ID     | Github-Profile                       |
@@ -17,75 +10,164 @@
 | I Wayan Priatna      | `A014BSY2686 ` | [@priatna1054](https://github.com/priatna1054) |
 
 # API Reference
+## Endpoint Routes
 
-## All Items
+| Route                           | HTTP Method | Description                                  |
+|---------------------------------|-------------|----------------------------------------------|
+| /users                          | GET         | Get all users                                |
+| /users/{{idUser}}               | GET         | Get users by Id                              |
+| /users                          | POST        | Add user                                     |
+| /users/{{idUser}}               | PUT         | Update users                                 |
+| /users/{{idUser}}               | DEL         | Delete users                                 |
+| /laundry                        | GET         | Get all laundry                              |
+| /laundry/{{idLaundry}}          | GET         | Get laundry by Id                            |
+| /laundry                        | POST        | Add laundry                                  |
+| /laundry/{{idLaundry}}          | PUT         | Update laundry                               |
+| /laundry/{{idLaundry}}          | DEL         | Delete laundry                               |
+| /transaction                    | GET         | Get all transaction                          |
+| /transaction/{{idTransaksi}}    | GET         | Get transaction by Id                        |
+| /transaction                    | POST        | Add transaction                              |
+| /transaction/{{idTransaksi}}    | PUT         | Update transaction                           |
+| /transaction/{{idTransaksi}}    | DEL         | Delete transaction                           |
 
-#### Get all items
-
-```
-  GET {{server}}/
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-#### Delete item
-
-```
-  DEL {{server}}/
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
+## Endpoints
+All requests to the Users API must include the `x-api-key` header with a valid API key.
 
 
-###
-## Users
-#### Get All Users
+### 1. Get All Users
+
+#### `GET /users`
+
+Retrieve information about all users.
+
+##### Request
+
+- Method: GET
+- Headers:
+  - `x-api-key`: Your API Key
+
+##### Response
+
+- Status Code: 200 OK
+- Body:
+  - `users`: An array of user objects.
+
+##### Example Response
+
+```json
+{
+    "users": [
+        {
+            "users_email": "yodya1532626336262@gmail.com",
+            "users_role": "user",
+            "users_id": "u1701666978475",
+            "firebase_uid": "1wFq80ZwfnTgAAju7pKPSuzdqdY2",
+            "users_picture": "https://storage.googleapis.com/klinbangkit2023/users/u1701666978475.jpg",
+            "users_name": "Yodya Mahesa",
+            "users_phone": "08961012345"
+        },
+        {
+            "users_email": "gintingherisanjaya@gmail.com",
+            "users_role": "user",
+            "users_name": "Heri",
+            "users_id": "u1702048723322",
+            "users_phone": "12357900099",
+            "firebase_uid": "kJdNqMLEPJeAdJVrDTayCIKkKYt2",
+            "users_picture": "https://storage.googleapis.com/klinbangkit2023/users/u1702048723322.png"
+        }
+    ]
+}
 ```
-  GET {{server}}/users
-```
-#### Get All Users by Id
-```
-  GET {{server}}/users/{{idUser}}
-```
-#### Add Users
-```
-  POST {{server}}/users
-```
-#### Update Users by Id
-```
-  PUT {{server}}/users/{{idUser}}
-```
-#### Delete Users by Id
-```
-  DEL {{server}}/users/{{idUser}}
-```
-###
-## Articel
-#### Get All Articel
-```
-  GET {{server}}/Articel
-```
-#### Get All Articel by Id
-```
-  GET {{server}}/Articel/{{idArticel}}
-```
-#### Add Articel
-```
-  POST {{server}}/Articel
-```
-#### Update Articel by Id
-```
-  PUT {{server}}/Articel/{{idArticel}}
-```
-#### Delete Articel by Id
-```
-  DEL {{server}}/Articel/{{idArticel}}
-```
-###
+
+### 2. Get User by ID
+
+#### `GET /users/{id}`
+
+Retrieve information about a specific user identified by their ID.
+
+##### Request
+
+- Method: GET
+- Headers:
+  - `x-api-key`: Your API Key
+- Path Parameters:
+  - `id`: The ID of the user
+
+##### Response
+
+- Status Code: 200 OK
+- Body: User object
+
+### 3. Create New User
+
+#### `POST /users`
+
+Create a new user.
+
+##### Request
+
+- Method: POST
+- Headers:
+  - `x-api-key`: Your API Key
+- Body Parameters:
+  - `users_name`: Name of the user
+  - `users_email`: Email of the user
+  - `users_phone`: Phone number of the user
+  - `users_role`: Role of the user
+  - `users_password`: Password for the user
+  - `users_picture`: User profile picture (multipart/form-data)
+
+##### Response
+
+- Status Code: 200 OK
+- Body:
+  - `status`: "success"
+
+### 4. Update User by ID
+
+#### `PUT /users/{id}`
+
+Update information for a specific user identified by their ID.
+
+##### Request
+
+- Method: PUT
+- Headers:
+  - `x-api-key`: Your API Key
+- Path Parameters:
+  - `id`: The ID of the user
+- Body Parameters:
+  - `users_name`: Updated name of the user
+  - `users_email`: Updated email of the user
+  - `users_phone`: Updated phone number of the user
+  - `users_role`: Updated role of the user
+  - `users_picture`: Updated user profile picture (multipart/form-data)
+
+##### Response
+
+- Status Code: 200 OK
+- Body:
+  - `status`: "success"
+
+### 5. Delete User by ID
+
+#### `DELETE /users/{id}`
+
+Delete a specific user identified by their ID.
+
+#### Request
+
+- Method: DELETE
+- Headers:
+  - `x-api-key`: Your API Key
+- Path Parameters:
+  - `id`: The ID of the user
+
+#### Response
+
+- Status Code: 200 OK
+- Body:
+  - `status`: "success"
 
 ## Deploying to Cloud Run
 - ### Preconditions
