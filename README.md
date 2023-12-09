@@ -1,3 +1,5 @@
+# Cloud Infrastructure
+<img src="./asset//cloud_architectur.drawio.png">
 
 ## Authors by Team ID: `CH2-PS442`
 | Name | Bangkit-ID     | Github-Profile                       |
