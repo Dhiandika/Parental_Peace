@@ -41,6 +41,18 @@ This folder is used to store 2 file including firebase-config.js and serviceAcco
 -after done 2 task above the file json that have downloaded store in private folder
 ```
 ## Endpoint Routes
+There are 5 Catagory for the Preconditions
+
+- `Prediction_bellypain-result`
+
+- `Prediction_burping-result`
+
+- `Prediction_discomfort-result`
+
+- `Prediction_hungry-result`
+
+- `Prediction_Tired-Results`
+
 
 | Route                           | HTTP Method | Description                                  |
 |---------------------------------|-------------|----------------------------------------------|
@@ -49,19 +61,32 @@ This folder is used to store 2 file including firebase-config.js and serviceAcco
 | /users                          | POST        | Add user                                     |
 | /users/{{idUser}}               | PUT         | Update users                                 |
 | /users/{{idUser}}               | DEL         | Delete users                                 |
-| /laundry                        | GET         | Get all laundry                              |
-| /laundry/{{idLaundry}}          | GET         | Get laundry by Id                            |
-| /laundry                        | POST        | Add laundry                                  |
-| /laundry/{{idLaundry}}          | PUT         | Update laundry                               |
-| /laundry/{{idLaundry}}          | DEL         | Delete laundry                               |
-| /transaction                    | GET         | Get all transaction                          |
-| /transaction/{{idTransaksi}}    | GET         | Get transaction by Id                        |
-| /transaction                    | POST        | Add transaction                              |
-| /transaction/{{idTransaksi}}    | PUT         | Update transaction                           |
-| /transaction/{{idTransaksi}}    | DEL         | Delete transaction                           |
+| /articles                        | GET         | Get all articles                              |
+| /articles/{{idarticles}}          | GET         | Get articles by Id                            |
+| /articles                        | POST        | Add articles                                  |
+| /articles/{{idarticles}}          | PUT         | Update articles                               |
+| /articles/{{idarticles}}          | DEL         | Delete articles                               |
+| /getDocuments                    | GET         | Get all Prediction                          |
+| /random_[katagori]_results   | GET         | Get random katagori result                         |
+| /[katagori]-result                    | POST        | Add [katagori]-result                              |
+| /[katagori]-result/{{idprediction}}    | PUT         | Update [katagori]-result by id                           |
+| /[katagori]-result/{{idprediction}}    | DEL         | Delete [katagori]-result by id                           |
+
+## Documentation for this API
+To see all documentation for this API 
+- Go to here for all documentation=> `https://documenter.getpostman.com/view/28165109/2s9YkgBjHD`
+- Go to here the Prediction => `https://documenter.getpostman.com/view/28165109/2s9YkgE6Bd`
+- Go to here the Prediction Prediction_bellypain-result => `https://documenter.getpostman.com/view/28165109/2s9YkgE6Be`
+- Go to here the Prediction Prediction_burping-result => `https://documenter.getpostman.com/view/28165109/2s9YkgE6Bg`
+- Go to here the Prediction Prediction_discomfort-result => `https://documenter.getpostman.com/view/28165109/2s9YkgE6Bi`
+- Go to here the Prediction Prediction_hungry-result => `https://documenter.getpostman.com/view/28165109/2s9YkgEQym`
+- Go to here the Prediction Prediction_Tired-Results => `https://documenter.getpostman.com/view/28165109/2s9YkgEQyn`
+
 
 ## Endpoints
 All requests to the Users API must include the `x-api-key` header with a valid API key.
+
+ And here are example how to use it
 
 
 ### 1. Get All Users
@@ -245,9 +270,9 @@ Dataset Links of This Project :
 - Link Hi-Fi Design : [Wireframe & Mockup](https://www.figma.com/file/stmmEOu6LeH6BLNDg4UP1a/Baby-Blues-Project-(Copy)?type=design&node-id=302-2&mode=design)
 - Link Prototype Design : [Refrensi](https://www.figma.com/file/stmmEOu6LeH6BLNDg4UP1a/Baby-Blues-Project-(Copy)?type=design&node-id=226-2&mode=design)
 
-## Deployment Link APK Waras
+## Deployment Link APK Parental Peace
 
-Download Link APK Waras:<br>
+Download Link APK Parental Peace:<br>
 [Parental Peace APK (Google Drive)](#)
 
 
