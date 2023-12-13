@@ -1,50 +1,50 @@
 # main.py
 
-from flask import Flask, request, jsonify
-from waitress import serve
+from fastapi import FastAPI, File, UploadFile, HTTPException, Depends
+from fastapi.security.api_key import APIKeyHeader
+from starlette.responses import JSONResponse
 from predict import predict_audio_category
 from tensorflow.keras.models import load_model
 import json
 import librosa
+import uvicorn
 
+app = FastAPI()
 
-app = Flask(__name__)
-
-    # Load the trained model
+# Load the trained model
 model_path = load_model('ML_Model/Model/babycrymodell.h5')
-
 
 # Declare api_key globally
 api_key = None
+API_KEY_NAME = "X-API-Key"
+api_key_header = APIKeyHeader(name=API_KEY_NAME, auto_error=False)
 
-@app.route("/predict_audio", methods=['POST'])
-def predict_audio_route():
-    global api_key  # Use the global api_key variable
-    if request.method == 'POST':
-        # Mengambil Kunci API dari Request Header
-        key = request.headers.get('X-API-Key')
-        # Jika Kunci API Benar
-        if key == api_key:
-            # Try (jika request valid)
-            try:
-                audio_file = request.files['audio']
-                audio_file.save('uploaded_audio.wav')
+async def get_api_key(api_key_header: str = Depends(api_key_header)):
+    if api_key_header == api_key:
+        return api_key_header
+    else:
+        raise HTTPException(
+            status_code=400, detail="Invalid API Key"
+        )
 
-                # Assuming you have these defined elsewhere
-                audio_data, sr = librosa.load('uploaded_audio.wav', sr=None)
-                max_length = 10000 # Define the max_length
+@app.post("/predict_audio")
+async def predict_audio_route(file: UploadFile = File(...), api_key: APIKeyHeader = Depends(get_api_key)):
+    try:
+        audio_file = await file.read()
+        with open('uploaded_audio.wav', 'wb') as f:
+            f.write(audio_file)
 
-                prediksi_label = predict_audio_category(model_path, 'uploaded_audio.wav', max_length)
+        # Assuming you have these defined elsewhere
+        audio_data, sr = librosa.load('uploaded_audio.wav', sr=None)
+        max_length = 10000  # Define the max_length
 
-                result = {'predicted_class': prediksi_label}
-                return jsonify(result)
-            # catch (jika request tidak valid)
-            except Exception as e:
-                print(str(e))
-                return jsonify({"status": "bad request"})
-        # Jika Kunci API Salah
-        else:
-            return jsonify({"status": "unauthorized"})
+        prediksi_label = predict_audio_category(model_path, 'uploaded_audio.wav', max_length)
+
+        result = {'predicted_class': prediksi_label}
+        return JSONResponse(content=result)
+    except Exception as e:
+        print(str(e))
+        return JSONResponse(content={"status": "bad request"})
 
 # Memulai Server
 if __name__ == "__main__":
@@ -52,4 +52,4 @@ if __name__ == "__main__":
         api_key = json.load(fileKey).get('api_key')
 
     print("Server: http://0.0.0.0:8080")
-    serve(app, host="0.0.0.0", port=8080)
+    uvicorn.run(app, host="0.0.0.0", port=8080)

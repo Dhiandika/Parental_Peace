@@ -23,7 +23,373 @@
             "users_phone": "089123456789",
             "users_role": "admin",
             "users_picture": "url"
-        }
-    ]
-    
-}
+        },
+        "articles": [
+            {
+                "a1701893318815": {
+                    "article_picture": null,
+                    "title": "Navigating the Joys and Challenges of New Parenthood",
+                    "content": "Welcoming a new life is a joyous occasion, yet the postpartum period can bring unexpected challenges for many new parents. One common phenomenon is the 'parental adjustment period,' marked by temporary mood swings, emotional ups and downs, and feelings of stress or anxiety. This emotional rollercoaster typically sets in days after childbirth and may last a few weeks.\\n\\n**Adjustment Period Symptoms**\\n\\nSymptoms include mood swings, irritability, fatigue, and changes in sleeping and eating patterns. Recognizing these signs is crucial to addressing challenges effectively.\\n\\n**Causes of Adjustment Period**\\n\\nContributing factors include hormonal fluctuations, lack of sleep, physical recovery from childbirth, and the overwhelming adjustment to new parenthood. Understanding these factors can help parents navigate challenges effectively.\\n\\n**Coping Strategies**\\n\\n1. **Rest and Self-Care:** Prioritize self-care and accept help from family and friends for daily tasks.\\n\\n2. **Open Communication:** Share feelings with trusted individuals or healthcare professionals for emotional support.\\n\\n3. **Establish a Routine:** Create a consistent daily routine for stability and predictability.\\n\\n4. **Healthy Lifestyle Choices:** Pay attention to nutrition, engage in light exercise, and stay hydrated for overall well-being.\\n\\n5. **Seek Professional Support:** If symptoms persist, seek help from mental health professionals specializing in postpartum issues.\\n\\n**Conclusion**\\n\\nThe parental adjustment period is common and temporary. Monitoring symptoms and seeking help if needed is essential. New parents are not alone; a supportive network can make a significant difference in their journey toward emotional well-being."
+                }
+            }
+        ],
+        "prediction_Bellypain_results": [
+            {
+                "1701949926528": {
+                    "prediction_id": "1701949926528",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Pegang bayi dengan lembut dan nyaman",
+                            "suggestion3": "Coba pijat perut bayi dengan gerakan lembut searah jarum jam",
+                            "suggestion2": "Gunakan botol berbentuk payung untuk menyusui"
+                        },
+                        "prediction_text": "Bayi mungkin mengalami rasa sakit perut karena kolik"
+                    }
+                }
+            },
+            {
+                "1701950229216": {
+                    "prediction_id": "1701950229216",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Perhatikan tanda-tanda dehidrasi dan beri ASI lebih sering",
+                            "suggestion3": "Hindari memberikan obat tanpa resep medis tanpa petunjuk dokter",
+                            "suggestion2": "Konsultasikan dengan dokter segera untuk pengobatan"
+                        },
+                        "prediction_text": "Infeksi saluran pencernaan dapat menjadi penyebab rasa sakit perut pada bayi."
+                    }
+                }
+            },
+            {
+                "1701950283804": {
+                    "prediction_id": "1701950283804",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Posisikan bayi dalam posisi tegak setelah makan",
+                            "suggestion3": "Berikan makanan dalam porsi kecil dan sering",
+                            "suggestion2": "Gunakan bantal yang sedikit lebih tinggi saat tidur"
+                        },
+                        "prediction_text": "Bayi mungkin merasa tidak nyaman karena ada masalah di perut nya "
+                    }
+                }
+            },
+            {
+                "1701950329833": {
+                    "prediction_id": "1701950329833",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Perhatikan reaksi setelah memberikan makanan baru",
+                            "suggestion3": "Perlahan-lahan perkenalkan makanan padat setelah usia tertentu",
+                            "suggestion2": "Konsultasikan dengan dokter tentang kemungkinan alergi"
+                        },
+                        "prediction_text": "Rasa sakit perut pada bayi dapat terjadi karena intoleransi terhadap beberapa jenis makanan"
+                    }
+                }
+            },
+            {
+                "1701950374567": {
+                    "prediction_id": "1701950374567",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Gunakan teknik pijat perut yang lembut untuk meredakan kembung.",
+                            "suggestion3": "Pertimbangkan penggunaan botol anti-kembung",
+                            "suggestion2": "Hindari memberikan makanan yang dapat menyebabkan gas."
+                        },
+                        "prediction_text": "Bayi mungkin mengalami kembung yang menyebabkan rasa sakit perut."
+                    }
+                }
+            }
+        ],
+        "prediction_Burpin_results": [
+            {
+                "1701953662551": {
+                    "prediction_id": "1701953662551",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Pastikan untuk mendukung kepala bayi saat memegangnya",
+                            "suggestion3": "Hindari memberi makan terlalu cepat atau terlalu banyak sekaligus",
+                            "suggestion2": "Coba lakukan pijatan lembut pada punggung bayi"
+                        },
+                        "prediction_text": "Bayi mungkin perlu diberi posisi yang tegak setelah makan."
+                    }
+                }
+            },
+            {
+                "1701953703174": {
+                    "prediction_id": "1701953703174",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Cobalah mengganti posisi bayi selama pemberian makan",
+                            "suggestion3": "Hindari memberi makan terlalu cepat atau terlalu banyak sekaligus",
+                            "suggestion2": "Hindari gangguan atau kebisingan selama burping"
+                        },
+                        "prediction_text": "Perhatikan tanda-tanda kenyang pada bayi setelah makan"
+                    }
+                }
+            },
+            {
+                "1701953728107": {
+                    "prediction_id": "1701953728107",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Pastikan untuk memberi waktu yang cukup antara makan dan waktu tidur",
+                            "suggestion3": "Hindari memberi makan bayi dalam posisi terlentang",
+                            "suggestion2": "Gunakan kain burp bersih untuk menangkap cairan yang mungkin keluar"
+                        },
+                        "prediction_text": "Pijat perut bayi dengan lembut untuk membantu proses pencernaan"
+                    }
+                }
+            },
+            {
+                "1701953772982": {
+                    "prediction_id": "1701953772982",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Coba ubah posisi bayi saat menyusui untuk membantu proses penelanannya",
+                            "suggestion3": "Hindari memberikan makanan terlalu cepat atau terlalu banyak sekaligus",
+                            "suggestion2": "Gunakan kain lembut untuk menepuk-nepuk punggung bayi dan merangsang bersendawa"
+                        },
+                        "prediction_text": "Si kecil tampak kesulitan bersendawa setelah makan..."
+                    }
+                }
+            },
+            {
+                "1701953823209": {
+                    "prediction_id": "1701953823209",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Lakukan gerakan melingkar pada perut bayi untuk merangsang pengeluaran gas.",
+                            "suggestion3": "Jika bayi menggunakan botol, pastikan putingnya tidak terlalu banyak udara.",
+                            "suggestion2": "Pastikan posisi menyusui mendukung aliran udara yang baik"
+                        },
+                        "prediction_text": "Bayi sering mengeluarkan suara seperti ingin bersendawa..."
+                    }
+                }
+            }
+        ],
+        "prediction_Discomfort_results": [
+            {
+                "1701955174841": {
+                    "prediction_id": "1701955174841",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Periksa apakah popok bayi sudah penuh atau kotor.",
+                            "suggestion3": "Cek apakah ada benjolan atau iritasi pada kulit bayi",
+                            "suggestion2": "Pastikan pakaian bayi tidak terlalu ketat dan nyaman dipakai."
+                        },
+                        "prediction_text": "Mama, Aku Tidak Nyaman..."
+                    }
+                }
+            },
+            {
+                "1701955224563": {
+                    "prediction_id": "1701955224563",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Lakukan pemeriksaan untuk melihat apakah ada benjolan atau tanda-tanda ketidaknyamanan fisik",
+                            "suggestion3": "Beri perhatian ekstra dan pelukan pada bayi untuk memberikan kenyamanan",
+                            "suggestion2": "Pastikan ruangan tempat bayi berada dalam kondisi nyaman dan tidak terlalu panas atau dingin."
+                        },
+                        "prediction_text": "Buah hatimu terlihat gelisah dan tidak tenang..."
+                    }
+                }
+            },
+            {
+                "1701955266346": {
+                    "prediction_id": "1701955266346",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Lakukan pemijatan lembut pada tubuh bayi untuk meredakan ketidaknyamanan.",
+                            "suggestion3": "Pastikan bayi tidak terlalu lelah dan butuh waktu istirahat yang cukup.",
+                            "suggestion2": "Periksa apakah ada rambut yang terlilit di jari atau anggota tubuh bayi."
+                        },
+                        "prediction_text": "Bayi tampak merasa tidak senang..."
+                    }
+                }
+            },
+            {
+                "1701955317488": {
+                    "prediction_id": "1701955317488",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Cek apakah ada tanda-tanda infeksi atau ketidaknyamanan pada area tubuh tertentu.",
+                            "suggestion3": "Beri perhatian dan stimulasi positif pada bayi untuk mengalihkan perhatiannya.",
+                            "suggestion2": "Pastikan bayi tidak mengenakan pakaian yang mengiritasi kulitnya."
+                        },
+                        "prediction_text": "Si kecil menangis tanpa alasan yang jelas..."
+                    }
+                }
+            },
+            {
+                "1701955360053": {
+                    "prediction_id": "1701955360053",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Periksa apakah ada benda asing atau kejutan yang membuat bayi merasa tidak nyaman di tempat tidur.",
+                            "suggestion3": "Coba variasi posisi tidur atau penambahan mainan yang bisa memberikan keceriaan pada bayi.",
+                            "suggestion2": "Pastikan suhu ruangan dan kelembapan di kamar bayi dalam batas yang nyaman."
+                        },
+                        "prediction_text": "Buah hatimu mungkin merasa tidak nyaman di tempat tidurnya..."
+                    }
+                }
+            }
+        ],
+        "prediction_Hungry_results": [
+            {
+                "1701956475952": {
+                    "prediction_id": "1701956475952",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Berikan bayi ASI atau susu formula sesuai dengan permintaannya.",
+                            "suggestion3": "Perhatikan tanda-tanda lapar seperti menghisap tangan atau mencari puting.",
+                            "suggestion2": "Pastikan waktu antara makanan bayi tidak terlalu panjang untuk menghindari rasa lapar yang berlebihan."
+                        },
+                        "prediction_text": "Mama, Aku Lapar..."
+                    }
+                }
+            },
+            {
+                "1701956519188": {
+                    "prediction_id": "1701956519188",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Cek apakah sudah saatnya memberikan makanan tambahan jika bayi sudah cukup usia",
+                            "suggestion3": "Jika bayi sudah bisa mengonsumsi makanan padat, berikan variasi makanan yang disukai.",
+                            "suggestion2": "Pastikan memberikan porsi makanan yang mencukupi untuk memenuhi kebutuhan nutrisi bayi."
+                        },
+                        "prediction_text": "Buah hatimu mungkin merasa lapar..."
+                    }
+                }
+            },
+            {
+                "1701956582572": {
+                    "prediction_id": "1701956582572",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Perhatikan pertumbuhan bayi dan sesuaikan porsinya sesuai dengan kebutuhan.",
+                            "suggestion3": "Coba variasi jenis makanan untuk memenuhi selera bayi yang berkembang.",
+                            "suggestion2": "Pastikan bayi mendapatkan asupan cairan yang cukup."
+                        },
+                        "prediction_text": "Si kecil mungkin mengalami peningkatan nafsu makan..."
+                    }
+                }
+            },
+            {
+                "1701957315446": {
+                    "prediction_id": "1701957315446",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Pastikan memberikan makanan yang sesuai dengan usia dan perkembangan bayi.",
+                            "suggestion3": "Perhatikan apakah bayi menunjukkan minat khusus pada jenis makanan tertentu.",
+                            "suggestion2": "Beri kesempatan bayi untuk mencoba makan sendiri jika sudah cukup besar."
+                        },
+                        "prediction_text": "Bayi tampak mencari-cari sesuatu untuk dimakan"
+                    }
+                }
+            },
+            {
+                "1701957372105": {
+                    "prediction_id": "1701957372105",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Perhatikan apakah bayi mengalami lonjakan pertumbuhan yang membutuhkan lebih banyak asupan makanan",
+                            "suggestion3": "Konsultasikan dengan dokter anak jika ada kekhawatiran tentang pola makan bayi.",
+                            "suggestion2": "Berikan camilan sehat jika bayi sudah cukup besar untuk mengatasi rasa lapar di antara waktu makan utama."
+                        },
+                        "prediction_text": "Buah hatimu mungkin butuh lebih banyak makanan..."
+                    }
+                }
+            }
+        ],
+        "prediction_Tired_results": [
+            {
+                "1701957692377": {
+                    "prediction_id": "1701957692377",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Pastikan bayi mendapatkan cukup waktu tidur sesuai dengan kebutuhannya.",
+                            "suggestion3": "Ciptakan rutinitas tidur yang nyaman untuk membantu bayi tidur lebih baik.",
+                            "suggestion2": "Periksa apakah ada faktor yang mengganggu tidur bayi seperti suhu ruangan atau kebisingan."
+                        },
+                        "prediction_text": "Mama, Aku Merasa Capek..."
+                    }
+                }
+            },
+            {
+                "1701957732989": {
+                    "prediction_id": "1701957732989",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Pastikan bayi tidak terlalu lelah karena aktivitas fisik yang berlebihan.",
+                            "suggestion3": "Perhatikan tanda-tanda kelelahan seperti mata bayi yang terlihat mengantuk atau merengek",
+                            "suggestion2": "Berikan waktu istirahat yang cukup di antara sesi bermain atau kegiatan belajar."
+                        },
+                        "prediction_text": "Buah hatimu mungkin merasa lelah..."
+                    }
+                }
+            },
+            {
+                "1701957782595": {
+                    "prediction_id": "1701957782595",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Ciptakan lingkungan yang tenang dan gelap saat bayi akan tidur.",
+                            "suggestion3": "Hindari kegiatan yang dapat membuat bayi terlalu bersemangat sebelum waktu tidur.",
+                            "suggestion2": "Usahakan memberikan waktu tidur yang konsisten setiap hari."
+                        },
+                        "prediction_text": "Si kecil tampak mengantuk..."
+                    }
+                }
+            },
+            {
+                "1701957824414": {
+                    "prediction_id": "1701957824414",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Berikan waktu istirahat yang cukup setelah sesi bermain atau aktivitas fisik.",
+                            "suggestion3": "Pastikan suhu ruangan yang nyaman untuk tidur",
+                            "suggestion2": "Perhatikan pola tidur siang dan malam untuk memastikan bayi mendapatkan waktu istirahat yang seimbang."
+                        },
+                        "prediction_text": "Bayi terlihat mengantuk setelah bermain..."
+                    }
+                }
+            },
+            {
+                "1701957854656": {
+                    "prediction_id": "1701957854656",
+                    "prediction_text": {
+                        "additional_info": {
+                            "suggestion1": "Coba perhatikan apakah bayi menunjukkan tanda-tanda kelelahan sebelum waktu tidur rutin.",
+                            "suggestion3": "Pastikan bayi tidak terlalu aktif atau terstimulasi sebelum waktu tidur malam.",
+                            "suggestion2": "Pertimbangkan untuk menyesuaikan jadwal tidur jika bayi tampak mengantuk lebih awal dari biasanya."
+                        },
+                        "prediction_text": "Buah hatimu mungkin butuh tidur lebih awal..."
+                    }
+                }
+            }
+        ],
+        "users": [
+            {
+                "u1701783089463": {
+                    "users_email": "npemburu622133@gmail.com",
+                    "users_role": "user",
+                    "users_name": "Dhiandika",
+                    "users_id": "u1701783089463",
+                    "users_phone": "081339035284",
+                    "firebase_uid": "kxBxuAbw2rgMYLelVcEWOvAwxSX2",
+                    "users_picture": "https://storage.googleapis.com/parental-peace2023/users/u1701783089463.jpeg"
+                }
+            },
+            {
+                "u1701791110405": {
+                    "users_email": "npemburuwesd3@gmail.com",
+                    "users_role": "user",
+                    "users_name": "Dhiandika",
+                    "users_id": "u1701791110405",
+                    "users_phone": "081339035284",
+                    "firebase_uid": "82mOyjaMs6dltskOxLbmylPEudq2",
+                    "users_picture": "https://storage.googleapis.com/parental-peace2023/users/u1701791110405.jpeg"
+                }
+            }
+        ]
+    }

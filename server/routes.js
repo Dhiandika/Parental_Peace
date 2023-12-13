@@ -1,6 +1,16 @@
 // Import dari Handler
 const { getAll, deleteAll } = require("./handler/alldata");
 
+const { predictAudio 
+} = require("./handler/mlrequest");
+
+const { forgotPassword 
+} = require("./handler/forgotpas");
+
+const { loginUsers,
+    getIdToken 
+} = require("./handler/login");
+
 const {
     getAllArticles,
     getArticle,
@@ -15,6 +25,7 @@ const {
     makeUsers,
     editUsers,
     deleteUsers,
+    deleteAllUserData,
 } = require("./handler/userdata");
 
 const { getDocumentsFromSpecificCollections } = require("./handler/predict");
@@ -95,7 +106,6 @@ const routes = [
         path: "/users/{id}",
         handler: getUsers,
     },
-
     // users - Buat Data Users Baru
     {
         method: "POST",
@@ -129,6 +139,11 @@ const routes = [
         method: "DELETE",
         path: "/users/{id}",
         handler: deleteUsers,
+    },    // users - Hapus Semua Data Users 
+    {
+        method: "DELETE",
+        path: "/users",
+        handler: deleteAllUserData,
     },
     // getAllArticles - Mengambil Semua Data Artikel dari Firestore
     {
@@ -438,7 +453,43 @@ const routes = [
         path: "/random_tired_results",
         handler: getRandomTiredResult,
     },
-
+    // Example route for making request to Flask server
+    {
+        method: "POST",
+        path: "/predict-audio",
+        handler: predictAudio,
+        options: {
+            payload: {
+                maxBytes: 10485760, // Sesuaikan dengan batas ukuran file audio yang diizinkan
+                multipart: true,
+                output: "stream", 
+            },
+        },
+    },
+    {
+        method: "POST",
+        path: "/loginUsers",
+        handler: loginUsers,
+        options: {
+            payload: {
+                maxBytes: 10485760, // Sesuaikan dengan batas ukuran file audio yang diizinkan
+                multipart: true,
+                output: "stream", 
+            },
+        },
+    },
+    {
+        method: 'POST',
+        path: '/forgot-password',
+        handler: forgotPassword,
+        options: {
+            payload: {
+                maxBytes: 10485760, // Sesuaikan dengan batas ukuran file audio yang diizinkan
+                multipart: true,
+                output: "stream", 
+            },
+        }
+    },
 ];
 
 // Export Routes

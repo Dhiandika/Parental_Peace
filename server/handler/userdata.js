@@ -5,6 +5,8 @@ const  {Storage}= require("@google-cloud/storage");
 const bucketName = require("../private/key.json").storage_bucket;
 const fs = require("fs");
 const path = require("path");
+const util = require('util');
+
 
 
 // users - Ambil Seluruh Data Users
@@ -70,74 +72,67 @@ const getUsers = async (request, h) => {
 const makeUsers = async (request, h) => {
     const key = request.headers["x-api-key"];
 
-    if (key === api_key) {
+    if (key !== api_key) {
+        const response = h.response({
+            status: "unauthorized",
+        });
+        response.code(401);
+        return response;
+    }
+
+    try {
+        const {
+            users_name,
+            users_email,
+            users_phone,
+            users_role,
+            users_password,
+            users_picture,
+        } = request.payload;
+
+        const userId = "u" + Date.now().toString();
+        const filename = users_picture?.hapi?.filename;
+        const data = users_picture?._data;
+
+        if (!filename || !data) {
+            const response = h.response({
+                status: "bad request",
+                message: "Invalid or missing 'users_picture' field in the payload.",
+            });
+            response.code(400);
+            return response;
+        }
+
+        const storage = new Storage({
+            keyFilename: path.join(__dirname, "../private/gcloud.json"),
+        });
+
+        const filePath = `./${filename}`;
+        const fileExtension = filename.split('.').pop();
+        const destFileName = `users/${userId}.${fileExtension}`;
+        const url = `https://storage.googleapis.com/${bucketName}/${destFileName}`;
+
+        async function uploadFile() {
+            const options = {
+                destination: destFileName,
+            };
+
+            await storage.bucket(bucketName).upload(filePath, options);
+
+            // Making file public to the internet
+            await storage
+                .bucket(bucketName)
+                .file(destFileName)
+                .makePublic();
+        }
+
+        const response = h.response(); // Initialize the response outside the try block
+
+        await util.promisify(fs.writeFile)(filePath, data);
+
         try {
-            const {
-                users_name,
-                users_email,
-                users_phone,
-                users_role,
-                users_password,
-                users_picture,
-            } = request.payload;
-
-            const userId = "u" + Date.now().toString();
-            
-            // Check if users_picture is defined and has 'hapi' property
-            const filename = users_picture && users_picture.hapi ? users_picture.hapi.filename : null;
-            const data = users_picture ? users_picture._data : null;
-
-            if (!filename || !data) {
-                const response = h.response({
-                    status: "bad request",
-                    message: "Invalid or missing 'users_picture' field in the payload.",
-                });
-                response.code(400);
-                return response;
-            }
-
-            const storage = new Storage({
-                keyFilename: path.join(__dirname, "../private/gcloud.json"),
-            });
-
-            // The path to your file to upload
-            const filePath = `./${filename}`;
-            const fileExtension = filename.split('.').pop();
-
-            // The new ID for your GCS file
-            const destFileName = `users/${userId}.${fileExtension}`;
-
-            // file URL
-            const url = `https://storage.googleapis.com/${bucketName}/${destFileName}`;
-
-            async function uploadFile() {
-                const options = {
-                    destination: destFileName,
-                };
-
-                await storage.bucket(bucketName).upload(filePath, options);
-
-                // Making file public to the internet
-                async function makePublic() {
-                    await storage
-                        .bucket(bucketName)
-                        .file(destFileName)
-                        .makePublic();
-                }
-
-                makePublic().catch(console.error);
-            }
-
-            fs.writeFile(filePath, data, async (err) => {
-                if (!err) {
-                    await uploadFile().catch(console.error);
-                    fs.unlink(filePath, (err) => {
-                        if (err) {
-                            console.error("Error deleting file:", err);
-                        }
-                    });
-                }
-            });
+            await uploadFile();
+            await util.promisify(fs.unlink)(filePath);
 
             const db = firebase_admin.firestore();
             const outputDb = db.collection("users");
@@ -147,7 +142,8 @@ const makeUsers = async (request, h) => {
                 password: users_password,
             });
 
-            const uid = userRecord.uid;
+            // Obtain the ID token from the created user
+            const idToken = await firebase_admin.auth().createCustomToken(userRecord.uid);
 
             await outputDb.doc(userId).set({
                 users_id: userId,
@@ -156,35 +152,30 @@ const makeUsers = async (request, h) => {
                 users_phone: users_phone,
                 users_role: users_role,
                 users_picture: url,
-                firebase_uid: uid,
+                firebase_uid: userRecord.uid,
             });
 
-            const response = h.response({
+            // Set the response data
+            const responseData = {
+                users_id: userRecord.uid,
                 status: "success",
-            });
-            response.code(200);
-            return response;
+                token: idToken,
+            };
+    
+            const response = h.response(responseData).code(200);
+            return response; // Return the response after the successful operation
         } catch (error) {
             console.error("Error creating user:", error);
-
-            const response = h.response({
-                status: "bad request",
-            });
-
-            if (error.code === "auth/email-already-exists") {
-                response.message = "Email address is already in use";
-                response.code(400);
-            } else {
-                response.code(500);
-            }
-
-            return response;
+            throw error; // Rethrow the error to handle it in the catch block below
         }
-    } else {
+    } catch (error) {
+        console.error("Error in makeUsers:", error);
+
         const response = h.response({
-            status: "unauthorized",
+            status: "bad request",
+            message: "Error creating user",
         });
-        response.code(401);
+        response.code(500);
         return response;
     }
 };
@@ -329,7 +320,7 @@ const deleteUsers = async (request, h) => {
             const db = firebase_admin.firestore();
             const outputDb = db.collection("users");
 
-            // Get the user document to obtain the users_picture URL
+            // Get the user document to obtain the users_picture URL and firebase_uid
             const userDoc = await outputDb.doc(id).get();
 
             // Check if the user exists
@@ -348,14 +339,23 @@ const deleteUsers = async (request, h) => {
             // Delete user's photo from cloud storage
             const users_picture_url = userDoc.data().users_picture;
             if (users_picture_url) {
-                const filename = users_picture_url.split('/').pop(); // Extract filename from URL
-                const storage = new Storage({
-                    keyFilename: path.join(__dirname, "../private/gcloud.json"),
-                });
+                try {
+                    const filename = users_picture_url.split('/').pop(); // Extract filename from URL
+                    const storage = new Storage({
+                        keyFilename: path.join(__dirname, "../private/gcloud.json"),
+                    });
 
-                // Delete the file from cloud storage
-                await storage.bucket(bucketName).file(`users/${filename}`).delete();
+                    // Delete the file from cloud storage
+                    await storage.bucket(bucketName).file(`users/${filename}`).delete();
+                } catch (storageError) {
+                    console.error("Error deleting user photo from cloud storage:", storageError);
+                    // Log the error and continue, since it's not critical for the overall operation
+                }
             }
+
+            // Delete user from Firebase Authentication
+            const firebaseUid = userDoc.data().firebase_uid;
+            await firebase_admin.auth().deleteUser(firebaseUid);
 
             const response = h.response({
                 status: "success",
@@ -367,6 +367,7 @@ const deleteUsers = async (request, h) => {
 
             const response = h.response({
                 status: "bad request",
+                message: "Error deleting user",
             });
             response.code(500); // Internal Server Error
             return response;
@@ -382,10 +383,63 @@ const deleteUsers = async (request, h) => {
     }
 };
 
+const deleteAllUserData = async () => {
+    try {
+        const db = firebase_admin.firestore();
+        const outputDb = db.collection("users");
+
+        // Get all documents in the "users" collection
+        const snapshot = await outputDb.get();
+
+        // Array to store all promises for parallel execution
+        const deletePromises = [];
+
+        // Loop through each document and delete user data
+        snapshot.forEach(async (doc) => {
+            const userId = doc.id;
+
+            // Delete user document from Firestore
+            const deleteDocPromise = outputDb.doc(userId).delete();
+            deletePromises.push(deleteDocPromise);
+
+            // Delete user's photo from Cloud Storage
+            const users_picture_url = doc.data().users_picture;
+            if (users_picture_url) {
+                const filename = users_picture_url.split('/').pop();
+                const storage = new Storage({
+                    keyFilename: path.join(__dirname, "../private/gcloud.json"),
+                });
+
+                // Delete the file from Cloud Storage
+                const deleteStoragePromise = storage.bucket(bucketName).file(`users/${filename}`).delete();
+                deletePromises.push(deleteStoragePromise);
+            }
+
+            // Delete user from Firebase Authentication
+            const firebaseUid = doc.data().firebase_uid;
+            const deleteUserPromise = firebase_admin.auth().deleteUser(firebaseUid);
+            deletePromises.push(deleteUserPromise);
+
+            console.log(`User data for ${userId} marked for deletion`);
+        });
+
+        // Wait for all promises to resolve
+        await Promise.all(deletePromises);
+
+        console.log("All user data deleted successfully");
+        return "success"; // Return a value or use return Promise.resolve("success");
+    } catch (error) {
+        console.error("Error deleting all user data:", error);
+        throw error; // Throw an error to fulfill Hapi's expectations
+    }
+};
+
+
 module.exports = {
     getAllUsers,
     getUsers,
     makeUsers,
     editUsers,
-    deleteUsers
+    deleteUsers,
+    deleteAllUserData,
 };
