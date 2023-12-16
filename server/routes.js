@@ -7,10 +7,18 @@ const { predictAudio
 const { forgotPassword 
 } = require("./handler/forgotpas");
 
+const { 
+        getAllDoctors,
+        getDoctorById,
+        makeDoctor,
+        editDoctor,
+        deleteAllDoctors,
+        deleteDoctorById, 
+} = require("./handler/doctor");
+
 const { loginUsers,
     getIdToken 
 } = require("./handler/login");
-
 const {
     getAllArticles,
     getArticle,
@@ -490,6 +498,51 @@ const routes = [
             },
         }
     },
+    {
+        method: 'POST',
+        path: '/makeDoctor',
+        handler: makeDoctor,
+        options: {
+            payload: {
+                maxBytes: 10485760, // Sesuaikan dengan batas ukuran file audio yang diizinkan
+                multipart: true,
+                output: "stream", 
+            },
+        }
+    },
+    {
+        method: 'PUT',
+        path: '/editDoctor/{id}',
+        handler: editDoctor,
+        options: {
+            payload: {
+                maxBytes: 10485760, // Sesuaikan dengan batas ukuran file audio yang diizinkan
+                multipart: true,
+                output: "stream", 
+            },
+        }
+    },
+        // Delete All Doctors
+    {
+        method: 'DELETE',
+        path: '/deleteAllDoctors',
+        handler: deleteAllDoctors,
+    },
+    {
+        method: 'DELETE',
+        path: '/deleteAllDoctors/{id}',
+        handler: deleteDoctorById,
+    },
+    {
+        method: "GET",
+        path: "/getAllDoctors",
+        handler: getAllDoctors,
+    }, 
+    {
+        method: "GET",
+        path: "/getAllDoctors/{id}",
+        handler: getDoctorById,
+    }, 
 ];
 
 // Export Routes
