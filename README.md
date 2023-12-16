@@ -90,6 +90,59 @@ All requests to the Users API must include the `x-api-key` header with a valid A
 
  And here are example how to use it
 
+###  Register User
+Create User Account
+
+#### `POST /register`
+
+##### Request
+- Method: POST
+- Body:
+  - `username` as String: Name of the user
+  - `email` as String: Email of the user
+  - `phone` as String: Phone number of the user
+  - `password` as String: Password for the user
+
+##### Response
+- Status Code: 200 OK
+
+##### Example Response
+```json
+{
+    "error": false,
+    "message": "Register Success"
+}
+```
+
+###  Login User
+Login User Account
+
+#### `POST /login`
+
+##### Request
+- Method: POST
+- Body:
+  - `email` as String: Email of the user
+  - `password` as String: Password for the user
+
+##### Response
+- Status Code: 200 OK
+- Body: User object
+
+##### Example Response
+```json
+{
+    "error": false,
+    "message": "Login Success",
+    "loginResult": {
+        "userId": "fWyb3CK1w13W3NX3bBZF",
+        "name": "Dhiandika",
+        "email": "npemburu6@gmail.com",
+        "phone": "081339035284",
+        "token": "04seARXEsHZBhsTtCxfQ9XQuSTn1"
+    }
+}
+```
 
 ### 1. Get All Users
 
@@ -140,7 +193,7 @@ Retrieve information about all users.
 }
 ```
 
-### 2. Get User by ID
+###  Get User by ID
 
 #### `GET /users/{id}`
 
