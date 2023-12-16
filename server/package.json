@@ -14,6 +14,7 @@
     "@google-cloud/storage": "^7.7.0",
     "@hapi/hapi": "^21.3.2",
     "axios": "^1.6.2",
+    "bcrypt": "^5.1.1",
     "firebase-admin": "^11.11.0",
     "nodemailer": "^6.9.7"
   },

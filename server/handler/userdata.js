@@ -6,6 +6,8 @@ const bucketName = require("../private/key.json").storage_bucket;
 const fs = require("fs");
 const path = require("path");
 const util = require('util');
+const bcrypt = require('bcrypt');
+
 
 
 
@@ -68,117 +70,55 @@ const getUsers = async (request, h) => {
     }
 };
 
-// users - Buat Data Users Baru
+// POST - Register User
 const makeUsers = async (request, h) => {
-    const key = request.headers["x-api-key"];
-
-    if (key !== api_key) {
-        const response = h.response({
-            status: "unauthorized",
-        });
-        response.code(401);
-        return response;
-    }
-
     try {
-        const {
-            users_name,
-            users_email,
-            users_phone,
-            users_role,
-            users_password,
-            users_picture,
-        } = request.payload;
+        const { username, email, phone, password } = request.payload;
 
-        const userId = "u" + Date.now().toString();
-        const filename = users_picture?.hapi?.filename;
-        const data = users_picture?._data;
+        // Hash the password before storing it
+        const hashedPassword = await bcrypt.hash(password, 5);
 
-        if (!filename || !data) {
-            const response = h.response({
-                status: "bad request",
-                message: "Invalid or missing 'users_picture' field in the payload.",
-            });
-            response.code(400);
-            return response;
-        }
-
-        const storage = new Storage({
-            keyFilename: path.join(__dirname, "../private/gcloud.json"),
+        // Create user in Firebase Authentication using the hashed password
+        const userRecord = await firebase_admin.auth().createUser({
+            email: email,
+            password: hashedPassword,
         });
 
-        const filePath = `./${filename}`;
-        const fileExtension = filename.split('.').pop();
-        const destFileName = `users/${userId}.${fileExtension}`;
-        const url = `https://storage.googleapis.com/${bucketName}/${destFileName}`;
+        const db = firebase_admin.firestore();
+        const outputDb = db.collection("users");
+        const newDocumentRef = outputDb.doc();
+        const documentId = newDocumentRef.id;
 
-        async function uploadFile() {
-            const options = {
-                destination: destFileName,
-            };
+        await newDocumentRef.set({
+            user_id: documentId,
+            username: username,
+            email: email,
+            phone: phone,
+            password: hashedPassword,
+            firebase_uid: userRecord.uid,
+        });
 
-            await storage.bucket(bucketName).upload(filePath, options);
-
-            // Making file public to the internet
-            await storage
-                .bucket(bucketName)
-                .file(destFileName)
-                .makePublic();
-        }
-
-        const response = h.response(); // Initialize the response outside the try block
-
-        await util.promisify(fs.writeFile)(filePath, data);
-
-        try {
-            await uploadFile();
-            await util.promisify(fs.unlink)(filePath);
-
-            const db = firebase_admin.firestore();
-            const outputDb = db.collection("users");
-
-            const userRecord = await firebase_admin.auth().createUser({
-                email: users_email,
-                password: users_password,
-            });
-
-            // Obtain the ID token from the created user
-            const idToken = await firebase_admin.auth().createCustomToken(userRecord.uid);
-
-            await outputDb.doc(userId).set({
-                users_id: userId,
-                users_name: users_name,
-                users_email: users_email,
-                users_phone: users_phone,
-                users_role: users_role,
-                users_picture: url,
-                firebase_uid: userRecord.uid,
-            });
-
-            // Set the response data
-            const responseData = {
-                users_id: userRecord.uid,
-                status: "success",
-                token: idToken,
-            };
-    
-            const response = h.response(responseData).code(200);
-            return response; // Return the response after the successful operation
-        } catch (error) {
-            console.error("Error creating user:", error);
-            throw error; // Rethrow the error to handle it in the catch block below
-        }
+        return {
+            error: false,
+            message: "Register Success",
+        };
     } catch (error) {
-        console.error("Error in makeUsers:", error);
+        console.error("Error creating user:", error);
 
-        const response = h.response({
-            status: "bad request",
-            message: "Error creating user",
-        });
-        response.code(500);
+        const response = {
+            error: true,
+            message: "Internal Server Error",
+        };
+
+        // Check if the error is due to an existing email
+        if (error.code === "auth/email-already-exists") {
+            response.message = "Email address is already in use";
+        }
+
         return response;
     }
 };
+
 
 
 // editUsers - Edit Data Users
