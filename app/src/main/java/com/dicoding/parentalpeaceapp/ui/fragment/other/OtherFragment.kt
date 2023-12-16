@@ -1,4 +1,4 @@
-package com.dicoding.parentalpeaceapp.ui.ui.other
+package com.dicoding.parentalpeaceapp.ui.fragment.other
 
 import android.content.Intent
 import android.os.Bundle

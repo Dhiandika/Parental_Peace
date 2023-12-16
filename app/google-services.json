@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "112753657336",
+    "project_id": "parental-peace-30b6e",
+    "storage_bucket": "parental-peace-30b6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112753657336:android:a1bed55fc0fd1cc43b820d",
+        "android_client_info": {
+          "package_name": "com.dicoding.parentalpeaceapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3-v18AZXwLUD9zlshdhG0SwUwNHgv_hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -35,5 +35,20 @@
     <string name="gender_input">Gender\t:</string>
     <string name="logout">Log Out</string>
     <string name="language">Language</string>
-    <string name="delete_account">Delete_Acount</string>
+    <string name="delete_account">Delete Acount</string>
+    <string name="search">Search</string>
+    <string name="favorite">Favorite</string>
+    <string name="filter_menu">Filter Menu</string>
+    <string name="all">All</string>
+    <string name="succeed">Succeed</string>
+    <string name="being_processed">Being processed</string>
+    <string name="failed">Failed</string>
+    <string name="save_information">Saved</string>
+    <string name="record_time">Recording 00:00</string>
+    <string name="end">end</string>
+    <string name="translation_results">Translation Results</string>
+    <string name="result_tittle_dummy">Bayi mungkin mengalami rasa sakit perut karena kolik</string>
+    <string name="result1_dummy">Pegang bayi dengan lembut dan nyaman</string>
+    <string name="result2_dummy">Gunakan botol berbentuk payung untuk menyusui</string>
+    <string name="result3_dummy">Coba pijat perut bayi dengan gerakan lembut searah jarum jam</string>
 </resources>

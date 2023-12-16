@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/transaction_filter1"
+        android:title="@string/all" />
+    <item
+        android:id="@+id/transaction_filter2"
+        android:title="@string/succeed" />
+    <item
+        android:id="@+id/transaction_filter3"
+        android:title="@string/being_processed" />
+    <item
+        android:id="@+id/transaction_filter4"
+        android:title="@string/failed" />
+
+</menu>

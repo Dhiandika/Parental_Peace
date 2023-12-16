@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_bg"
-    tools:context=".ui.HomeActivity">
+    tools:context=".ui.MainActivity">
 
     <fragment
         android:id="@+id/nav_host_fragment_activity_home"
@@ -52,6 +52,5 @@
         app:srcCompat="@drawable/baseline_mic_none_72"
         app:tint="@android:color/white"
         app:layout_anchor="@id/bottomapp_bar"/>
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

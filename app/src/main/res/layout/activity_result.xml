@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/result_bg"
+    tools:context=".ui.ResultActivity">
+
+    <ImageView
+        android:id="@+id/homelgView"
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@+id/activity_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/translation_results"
+        android:textSize="20sp"
+        android:textAppearance="@style/font18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tittle_result"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="60dp"
+        android:gravity="start"
+        android:text="@string/result_tittle_dummy"
+        android:textAlignment="gravity"
+        android:textAppearance="@style/font18"
+        android:textSize="16dp"
+        android:textColor="@color/black_hint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_information" />
+
+    <ImageView
+        android:id="@+id/iv_box1"
+        android:layout_width="320dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/result_box_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tittle_result" />
+
+    <TextView
+        android:id="@+id/tv_result1"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/result1_dummy"
+        android:textAppearance="@style/font14"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_box1"
+        app:layout_constraintEnd_toEndOf="@+id/iv_box1"
+        app:layout_constraintStart_toStartOf="@+id/iv_box1"
+        app:layout_constraintTop_toTopOf="@+id/iv_box1" />
+
+
+    <ImageView
+        android:id="@+id/iv_box2"
+        android:layout_width="320dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/result_box_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_box1" />
+
+    <TextView
+        android:id="@+id/tv_result2"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/result2_dummy"
+        android:textAppearance="@style/font14"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_box2"
+        app:layout_constraintEnd_toEndOf="@+id/iv_box2"
+        app:layout_constraintStart_toStartOf="@+id/iv_box2"
+        app:layout_constraintTop_toTopOf="@+id/iv_box2" />
+
+
+    <ImageView
+        android:id="@+id/iv_box3"
+        android:layout_width="320dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/result_box_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_box2" />
+
+    <TextView
+        android:id="@+id/tv_result3"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/result3_dummy"
+        android:textAppearance="@style/font14"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_box3"
+        app:layout_constraintEnd_toEndOf="@+id/iv_box3"
+        app:layout_constraintStart_toStartOf="@+id/iv_box3"
+        app:layout_constraintTop_toTopOf="@+id/iv_box3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,20 @@
     android:background="@drawable/signin_background"
     tools:context=".ui.SignInActivity">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,24 +49,22 @@
         android:id="@+id/email_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="-40dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/email_input"
         android:textAppearance="@style/font12"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/et_email_login"
+        app:layout_constraintStart_toStartOf="@+id/et_email_login"
         tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="6dp"
         android:background="@drawable/baseline_email_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_login"
-        android:importantForAccessibility="no" />
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="@id/et_email_login"
+        app:layout_constraintTop_toTopOf="@+id/et_email_login" />
 
     <EditText
         android:id="@+id/et_email_login"
@@ -66,7 +78,7 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_login"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_horizontal"
         tools:ignore="DuplicateClickableBoundsCheck,
         DuplicateSpeakableTextCheck,
         RtlSymmetry,
@@ -77,23 +89,22 @@
         android:id="@+id/password_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
         android:layout_marginTop="24dp"
         android:text="@string/password_input"
         android:textAppearance="@style/font12"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/et_email_login"
         app:layout_constraintTop_toBottomOf="@+id/et_email_login"
         tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="6dp"
         android:background="@drawable/baseline_key_24"
         android:importantForAccessibility="no"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_login"
+        app:layout_constraintStart_toStartOf="@id/et_password"
+        app:layout_constraintTop_toTopOf="@+id/et_password"
         tools:ignore="ImageContrastCheck" />
 
     <EditText

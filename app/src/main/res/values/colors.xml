@@ -5,6 +5,7 @@
     <color name="black_hint2">#60000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#03A894</color>
+    <color name="green_young">#8004C5A7</color>
     <color name="grey">#AAAAAA</color>
     <color name="white_hint">#80FFFFFF</color>
 
@@ -14,7 +15,7 @@
     <color name="blueSecondaryVariant">#2B56A5</color>
 
     <color name="greenPrimaryDark">#02807A</color>
-    <color name="greenPrimaryVariantDark">#1B5E20</color>
+    <color name="greenPrimaryVariantDark">#00000000</color>
     <color name="blueSecondaryDark">#0D47A1</color>
     <color name="blueSecondaryVariantDark">#0D47A1</color>
 </resources>

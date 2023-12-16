@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    tools:context=".ui.fragment.ConsultationActivity">
+
+    <ImageView
+        android:id="@+id/homelgView"
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAccessibility="no" />
+
+    <TextView
+        android:id="@+id/activity_consultation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/consultation"
+        android:textSize="20sp"
+        android:textAppearance="@style/font18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SearchView
+        android:id="@+id/searchview_consultation"
+        android:layout_width="355dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:autofillHints="name"
+        android:background="@drawable/search_bg"
+        android:searchIcon="@drawable/baseline_search_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_consultation" />
+
+    <ImageButton
+        android:id="@+id/favorite_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/baseline_favorite_24"
+        android:backgroundTint="@color/black_hint2"
+        android:contentDescription="@string/favorite"
+        app:layout_constraintBottom_toBottomOf="@+id/searchview_consultation"
+        app:layout_constraintEnd_toEndOf="@+id/searchview_consultation"
+        app:layout_constraintTop_toTopOf="@+id/searchview_consultation"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/searchview_consultation"
+        app:layout_constraintStart_toStartOf="@+id/searchview_consultation"
+        app:layout_constraintTop_toBottomOf="@+id/searchview_consultation" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

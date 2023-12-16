@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_bg"
-    tools:context=".ui.ui.other.OtherFragment">
+    tools:context=".ui.fragment.other.OtherFragment">
 
     <ImageView
         android:id="@+id/otherlgView"
