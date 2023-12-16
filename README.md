@@ -76,13 +76,13 @@ There are 5 Catagory for the Preconditions
 
 ## Documentation for this API
 To see all documentation for this API 
-- Go to here for all documentation=> `https://documenter.getpostman.com/view/28165109/2s9YkgBjHD`
-- Go to here the Prediction => `https://documenter.getpostman.com/view/28165109/2s9YkgE6Bd`
-- Go to here the Prediction Prediction_bellypain-result => `https://documenter.getpostman.com/view/28165109/2s9YkgE6Be`
-- Go to here the Prediction Prediction_burping-result => `https://documenter.getpostman.com/view/28165109/2s9YkgE6Bg`
-- Go to here the Prediction Prediction_discomfort-result => `https://documenter.getpostman.com/view/28165109/2s9YkgE6Bi`
-- Go to here the Prediction Prediction_hungry-result => `https://documenter.getpostman.com/view/28165109/2s9YkgEQym`
-- Go to here the Prediction Prediction_Tired-Results => `https://documenter.getpostman.com/view/28165109/2s9YkgEQyn`
+- Go to here for all documentation=> https://documenter.getpostman.com/view/28165109/2s9YkgBjHD
+- Go to here the Prediction => https://documenter.getpostman.com/view/28165109/2s9YkgE6Bd
+- Go to here the Prediction Prediction_bellypain-result => https://documenter.getpostman.com/view/28165109/2s9YkgE6Be
+- Go to here the Prediction Prediction_burping-result => https://documenter.getpostman.com/view/28165109/2s9YkgE6Bg
+- Go to here the Prediction Prediction_discomfort-result => https://documenter.getpostman.com/view/28165109/2s9YkgE6Bi
+- Go to here the Prediction Prediction_hungry-result => https://documenter.getpostman.com/view/28165109/2s9YkgEQym
+- Go to here the Prediction Prediction_Tired-Results => https://documenter.getpostman.com/view/28165109/2s9YkgEQyn
 
 
 ## Endpoints
@@ -210,96 +210,6 @@ Retrieve information about all users.
     ]
 }
 ```
-
-###  Get User by ID
-
-#### `GET /users/{id}`
-
-Retrieve information about a specific user identified by their ID.
-
-##### Request
-
-- Method: GET
-- Headers:
-  - `x-api-key`: Your API Key
-- Path Parameters:
-  - `id`: The ID of the user
-
-##### Response
-
-- Status Code: 200 OK
-- Body: User object
-
-### 3. Create New User
-
-#### `POST /users`
-
-Create a new user.
-
-##### Request
-
-- Method: POST
-- Headers:
-  - `x-api-key`: Your API Key
-- Body Parameters:
-  - `users_name`: Name of the user
-  - `users_email`: Email of the user
-  - `users_phone`: Phone number of the user
-  - `users_role`: Role of the user
-  - `users_password`: Password for the user
-  - `users_picture`: User profile picture (multipart/form-data)
-
-##### Response
-
-- Status Code: 200 OK
-- Body:
-  - `status`: "success"
-
-### 4. Update User by ID
-
-#### `PUT /users/{id}`
-
-Update information for a specific user identified by their ID.
-
-##### Request
-
-- Method: PUT
-- Headers:
-  - `x-api-key`: Your API Key
-- Path Parameters:
-  - `id`: The ID of the user
-- Body Parameters:
-  - `users_name`: Updated name of the user
-  - `users_email`: Updated email of the user
-  - `users_phone`: Updated phone number of the user
-  - `users_role`: Updated role of the user
-  - `users_picture`: Updated user profile picture (multipart/form-data)
-
-##### Response
-
-- Status Code: 200 OK
-- Body:
-  - `status`: "success"
-
-### 5. Delete User by ID
-
-#### `DELETE /users/{id}`
-
-Delete a specific user identified by their ID.
-
-#### Request
-
-- Method: DELETE
-- Headers:
-  - `x-api-key`: Your API Key
-- Path Parameters:
-  - `id`: The ID of the user
-
-#### Response
-
-- Status Code: 200 OK
-- Body:
-  - `status`: "success"
 
 ## Deploying to Cloud Run
 - ### Preconditions
