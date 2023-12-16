@@ -90,6 +90,45 @@ All requests to the Users API must include the `x-api-key` header with a valid A
 
  And here are example how to use it
 
+ ###  Predic
+Create User Account
+
+#### `POST /register`
+
+##### Request
+- Method: POST
+- Body:
+  - `audio` as file: input file 
+
+
+##### Response
+- Status Code: 200 OK
+
+##### Example Response
+```json
+{
+    {
+    "status": "success",
+    "data": {
+        "dataResponse": {
+            "predicted_class": "tired"
+        },
+        "randomResult": {
+            "prediction_id": "1701957692377",
+            "prediction_text": {
+                "additional_info": {
+                    "suggestion1": "Pastikan bayi mendapatkan cukup waktu tidur sesuai dengan kebutuhannya.",
+                    "suggestion3": "Ciptakan rutinitas tidur yang nyaman untuk membantu bayi tidur lebih baik.",
+                    "suggestion2": "Periksa apakah ada faktor yang mengganggu tidur bayi seperti suhu ruangan atau kebisingan."
+                },
+                "prediction_text": "Mama, Aku Merasa Capek..."
+            }
+        }
+    }
+}
+}
+```
+
 ###  Register User
 Create User Account
 
