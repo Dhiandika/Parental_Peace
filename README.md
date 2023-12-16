@@ -168,25 +168,43 @@ Retrieve information about all users.
 {
     "users": [
         {
-            "u1702038833979": {
-                "users_email": "npemburu321@gmail.com",
-                "users_role": "user",
-                "users_name": "Dhiandika",
-                "users_id": "u1702038833979",
-                "users_phone": "081339035284",
-                "firebase_uid": "Fo7ekvOTvVZcf4BVbxzmypAZGOV2",
-                "users_picture": "https://storage.googleapis.com/parental-peace2023/users/u1702038833979.png"
+            "3byMJWXnaseHKBh1NIZA": {
+                "password": "$2b$05$XIc9dcDztTO0WP4bLTTyROza6uwafsYNiD97ijDrLBKuwYclQyYwm",
+                "user_id": "3byMJWXnaseHKBh1NIZA",
+                "phone": "081339035284",
+                "firebase_uid": "DaKUUaKcxVM6SFjDs1cc6ZmAC4a2",
+                "email": "npemburu4@gmail.com",
+                "username": "Dhiandika"
             }
         },
         {
-            "u1702039045742": {
-                "users_email": "npemburu21@gmail.com",
-                "users_role": "user",
-                "users_name": "Dhiandika",
-                "users_id": "u1702039045742",
-                "users_phone": "081339035284",
-                "firebase_uid": "QcGtMCwBdrehn94spqbgbpaXYUQ2",
-                "users_picture": "https://storage.googleapis.com/parental-peace2023/users/u1702039045742.png"
+            "RjB7SlbDqu9zMMwmxF45": {
+                "password": "$2b$05$xxEKLPb/3my8MRPoT.XQ.uqfT8SW/u.NznG2S9dI7nIVeFbXSl74K",
+                "user_id": "RjB7SlbDqu9zMMwmxF45",
+                "phone": "081339035284",
+                "firebase_uid": "gcNxoX89uefFfPqqGXrCO1LejFi2",
+                "email": "wayan123@gmail.com",
+                "username": "Wayan"
+            }
+        },
+        {
+            "fWyb3CK1w13W3NX3bBZF": {
+                "password": "$2b$05$2EZoMbAnR2RvV2MiLjr.g.9E2ogNzPnMjpygzo0N3LEpTT64Zz8bq",
+                "user_id": "fWyb3CK1w13W3NX3bBZF",
+                "phone": "081339035284",
+                "firebase_uid": "04seARXEsHZBhsTtCxfQ9XQuSTn1",
+                "email": "npemburu6@gmail.com",
+                "username": "Dhiandika"
+            }
+        },
+        {
+            "kmkrG4IoWtUXl9TiZD3w": {
+                "password": "$2b$05$hPb3kJdxJdZ5YqOmPgwjKO6V.mqnKLNx9dJ5epKVqwrp5hgpGWIFy",
+                "user_id": "kmkrG4IoWtUXl9TiZD3w",
+                "phone": "081339035284",
+                "firebase_uid": "8kHnv9tTC6OFMdfR49XcqnZeT7q2",
+                "email": "npemburu34@gmail.com",
+                "username": "Dhiandika"
             }
         }
     ]
