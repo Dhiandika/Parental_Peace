@@ -7,6 +7,8 @@ const { predictAudio
 const { forgotPassword 
 } = require("./handler/forgotpas");
 
+const { registerUser 
+} = require("./handler/regis");
 const { 
         getAllDoctors,
         getDoctorById,
@@ -119,13 +121,6 @@ const routes = [
         method: "POST",
         path: "/users",
         handler: makeUsers,
-        options: {
-            payload: {
-                maxBytes: 10485760,
-                multipart: true,
-                output: "stream",
-            },
-        },
     },
 
     // users - Edit Data Users Tertentu
@@ -474,29 +469,22 @@ const routes = [
             },
         },
     },
+    // users - Buat Data Users Baru
+    {
+        method: "POST",
+        path: "/registerUser",
+        handler: registerUser,
+    },
+    // users - Login Users 
     {
         method: "POST",
         path: "/loginUsers",
         handler: loginUsers,
-        options: {
-            payload: {
-                maxBytes: 10485760, // Sesuaikan dengan batas ukuran file audio yang diizinkan
-                multipart: true,
-                output: "stream", 
-            },
-        },
     },
     {
         method: 'POST',
-        path: '/forgot-password',
+        path: '/forgot-password',                   
         handler: forgotPassword,
-        options: {
-            payload: {
-                maxBytes: 10485760, // Sesuaikan dengan batas ukuran file audio yang diizinkan
-                multipart: true,
-                output: "stream", 
-            },
-        }
     },
     {
         method: 'POST',

@@ -8,37 +8,26 @@ const path = require("path");
 // Function to get all doctors
 const getAllDoctors = async (request, h) => {
     try {
-        const key = request.headers['x-api-key'];
+        // Get a reference to the 'doctors' collection in Firebase
+        const doctorsCollection = firebase_admin.firestore().collection('doctors');
 
-        // Check if the API key is correct
-        if (key === api_key) {
-            // Get a reference to the 'doctors' collection in Firebase
-            const doctorsCollection = firebase_admin.firestore().collection('doctors');
+        // Get all doctors from the collection
+        const doctorsSnapshot = await doctorsCollection.get();
 
-            // Get all doctors from the collection
-            const doctorsSnapshot = await doctorsCollection.get();
+        // Extract doctor data from the snapshot
+        const doctors = [];
+        doctorsSnapshot.forEach((doctorDoc) => {
+            const doctorData = doctorDoc.data();
+            doctorData.id = doctorDoc.id;
+            doctors.push(doctorData);
+        });
 
-            // Extract doctor data from the snapshot
-            const doctors = [];
-            doctorsSnapshot.forEach((doctorDoc) => {
-                const doctorData = doctorDoc.data();
-                doctorData.id = doctorDoc.id;
-                doctors.push(doctorData);
-            });
-
-            const response = h.response({
-                status: 'success',
-                data: doctors,
-            });
-            response.code(200); // OK
-            return response;
-        } else {
-            const response = h.response({
-                status: 'unauthorized',
-            });
-            response.code(401);
-            return response;
-        }
+        const response = h.response({
+            status: 'success',
+            data: doctors,
+        });
+        response.code(200); // OK
+        return response;
     } catch (error) {
         console.error('Error getting all doctors:', error);
 
