@@ -1,8 +1,8 @@
 
 ## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://alpha-parental-peace.et.r.appspot.com/)
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://parental-peace.github.io/)
 ![Logo](https://github.com/Dhiandika/Parental_Peace/assets/91781422/94606bcf-1014-4fd4-b43b-25fbee94031c)
-[The website](https://alpha-parental-peace.et.r.appspot.com/)
+[The website](https://parental-peace.github.io/)
 
 
 
