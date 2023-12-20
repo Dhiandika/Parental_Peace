@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/home_bg"
-    tools:context=".ui.fragment.profile.ProfileFragment">
+    tools:context=".ui.main.bottomnavigation.profile.ProfileFragment">
 
     <ImageView
         android:id="@+id/profilelgView"
@@ -54,21 +54,6 @@
         app:layout_constraintStart_toStartOf="@+id/iv_item1"
         app:layout_constraintTop_toTopOf="@+id/iv_item1" />
 
-    <TextView
-        android:id="@+id/tv_signin_click"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="25dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="onClickHandler"
-        android:text="@string/change"
-        android:textAppearance="@style/font12"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@+id/iv_item1"
-        app:layout_constraintTop_toTopOf="@+id/iv_item1"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <TextView
         android:id="@+id/profile_name"
@@ -107,27 +92,4 @@
         app:layout_constraintStart_toStartOf="@+id/profile_email"
         app:layout_constraintTop_toBottomOf="@+id/profile_email" />
 
-    <TextView
-        android:id="@+id/profile_age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="@string/age_input"
-        android:textAppearance="@style/font12"
-        android:textColor="@color/black_hint2"
-        app:layout_constraintStart_toStartOf="@+id/profile_number"
-        app:layout_constraintTop_toBottomOf="@+id/profile_number" />
-
-    <TextView
-        android:id="@+id/profile_gender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="@string/gender_input"
-        android:textAppearance="@style/font12"
-        android:textColor="@color/black_hint2"
-        app:layout_constraintStart_toStartOf="@+id/profile_age"
-        app:layout_constraintTop_toBottomOf="@+id/profile_age" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.dicoding.parentalpeaceapp.ui.fragment.home.HomeFragment"
+        android:name="com.dicoding.parentalpeaceapp.ui.main.bottomnavigation.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.dicoding.parentalpeaceapp.ui.fragment.notifications.NotificationsFragment"
+        android:name="com.dicoding.parentalpeaceapp.ui.main.bottomnavigation.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.dicoding.parentalpeaceapp.ui.fragment.profile.ProfileFragment"
+        android:name="com.dicoding.parentalpeaceapp.ui.main.bottomnavigation.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/navigation_other"
-        android:name="com.dicoding.parentalpeaceapp.ui.fragment.other.OtherFragment"
+        android:name="com.dicoding.parentalpeaceapp.ui.main.bottomnavigation.other.OtherFragment"
         android:label="@string/title_other"
         tools:layout="@layout/fragment_other" />
 </navigation>

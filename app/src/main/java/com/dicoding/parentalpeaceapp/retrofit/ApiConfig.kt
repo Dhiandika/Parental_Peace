@@ -4,18 +4,32 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import com.dicoding.parentalpeaceapp.BuildConfig
+import okhttp3.Interceptor
 
 class ApiConfig {
 
     companion object{
+        var token = ""
         fun getApiService(): ApiService {
-            val loggingInterceptor =
+            val loggingInterceptor = if(BuildConfig.DEBUG) {
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+            }else {
+                HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
+            }
+            val authInterceptor = Interceptor { chain ->
+                val req = chain.request()
+                val requestHeaders = req.newBuilder()
+                    .addHeader("X-API-Key", BuildConfig.API_KEY)
+                    .build()
+                chain.proceed(requestHeaders)
+            }
             val client = OkHttpClient.Builder()
                 .addInterceptor(loggingInterceptor)
+                .addInterceptor(authInterceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("https://parental-peace-server-backend-qmmp447bwa-et.a.run.app/")
+                .baseUrl(BuildConfig.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

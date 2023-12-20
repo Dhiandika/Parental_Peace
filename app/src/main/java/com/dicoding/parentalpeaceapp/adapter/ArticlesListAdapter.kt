@@ -13,7 +13,7 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.dicoding.parentalpeaceapp.databinding.ArticlesItemBinding
 import com.dicoding.parentalpeaceapp.response.DataItem
-import com.dicoding.parentalpeaceapp.ui.DetailArticelActivity
+import com.dicoding.parentalpeaceapp.ui.detailarticle.DetailArticelActivity
 
 class ArticlesListAdapter :
     ListAdapter<DataItem, ArticlesListAdapter.MyViewHolder>(DIFF_CALLBACK) {

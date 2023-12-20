@@ -29,7 +29,7 @@ class InformationActivity : AppCompatActivity() {
             if (articles != null) {
                 setArticleList(articles)
             } else {
-                showToast(getString(R.string.no_notification))
+                showToast(getString(R.string.no_articel))
             }
         }
     }

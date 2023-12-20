@@ -51,4 +51,21 @@
     <string name="result1_dummy">Pegang bayi dengan lembut dan nyaman</string>
     <string name="result2_dummy">Gunakan botol berbentuk payung untuk menyusui</string>
     <string name="result3_dummy">Coba pijat perut bayi dengan gerakan lembut searah jarum jam</string>
+
+    <string name="email_error">Enter the appropriate email format!</string>
+    <string name="password_error">Password Must Not Be Less Than 8 Characters!</string>
+
+    <string name="null_name">Name Column can not be empty</string>
+    <string name="null_email">Email Column can not be empty</string>
+    <string name="null_password">Password Column can not be empty</string>
+    <string name="next">Next</string>
+    <string name="regis_succses">Registration Successful! Your account has been successfully created.</string>
+    <string name="signin_success">Sign In Success</string>
+    <string name="null_number">Number can not be empty</string>
+    <string name="no_transaction_yet">No Transaction Yet</string>
+    <string name="no_listdoctor">can not show doctor list</string>
+    <string name="no_articel">Can not show article list</string>
+    <string name="logout_reminder">You want to Log out?</string>
+    <string name="cancel">Cancel</string>
+    <string name="not_simmilar">The input is different from the password</string>
 </resources>

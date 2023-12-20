@@ -5,7 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/signup_background"
-    tools:context=".ui.SignUpActivity">
+    tools:context=".ui.signup.SignUpActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageButton
         android:id="@+id/back_button1"
@@ -20,6 +29,7 @@
         tools:ignore="TouchTargetSizeCheck,ImageContrastCheck" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -32,14 +42,15 @@
         tools:ignore="TextContrastCheck" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="132dp"
         android:text="@string/name_input"
         android:textAppearance="@style/font12"
-        app:layout_constraintBottom_toTopOf="@+id/et_name"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TextContrastCheck" />
 
 
@@ -47,7 +58,7 @@
         android:id="@+id/et_name"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="8dp"
         android:autofillHints="name"
         android:backgroundTint="@android:color/white"
         android:fontFamily="@font/poppins_regular"
@@ -56,9 +67,8 @@
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white_hint"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="DuplicateSpeakableTextCheck,RtlSymmetry,TextContrastCheck,TextFields" />
 
     <TextView
@@ -74,7 +84,7 @@
         tools:ignore="TextContrastCheck" />
 
 
-    <EditText
+    <com.dicoding.parentalpeaceapp.custom.CustomEmailEditText
         android:id="@+id/et_email"
         style="@style/signup_edittext"
         android:layout_width="300dp"
@@ -83,8 +93,7 @@
         android:autofillHints="emailAddress"
         android:hint="@string/email_input"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/email_textView"
         app:layout_constraintTop_toBottomOf="@+id/email_textView"
         tools:ignore="TextContrastCheck,TextFields,DuplicateSpeakableTextCheck,DuplicateClickableBoundsCheck" />
 
@@ -126,7 +135,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_number"
         tools:ignore="TextContrastCheck" />
 
-    <EditText
+    <com.dicoding.parentalpeaceapp.custom.CustomPasswordEditText
         android:id="@+id/et_password"
         style="@style/signup_edittext"
         android:layout_width="300dp"
@@ -135,8 +144,8 @@
         android:autofillHints="password"
         android:hint="@string/password_input"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:endIconMode="password_toggle"
+        app:layout_constraintStart_toStartOf="@id/password_textView"
         app:layout_constraintTop_toBottomOf="@+id/password_textView"
         tools:ignore="TextContrastCheck,TextFields,DuplicateSpeakableTextCheck" />
 
@@ -152,7 +161,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_password"
         tools:ignore="TextContrastCheck" />
 
-    <EditText
+    <com.dicoding.parentalpeaceapp.custom.CustomPasswordEditText
         android:id="@+id/et_retypepw"
         style="@style/signup_edittext"
         android:layout_width="300dp"
@@ -161,8 +170,7 @@
         android:autofillHints="password"
         android:hint="@string/retype_input"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/retypepw_textView"
         app:layout_constraintTop_toBottomOf="@+id/retypepw_textView"
         tools:ignore="TextContrastCheck,TextFields,DuplicateSpeakableTextCheck" />
 

@@ -2,8 +2,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
-    id("com.google.gms.google-services")
     id("com.google.devtools.ksp")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -18,6 +18,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "BASE_URL", "\"https://parental-peace-server-backend-qmmp447bwa-et.a.run.app/\"")
+        buildConfigField("String", "API_KEY", "\"jalan\"")
     }
 
     buildTypes {
@@ -38,6 +41,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -89,5 +93,7 @@ dependencies {
     implementation("androidx.cardview:cardview:1.0.0")
 
     implementation("androidx.fragment:fragment-ktx:1.6.2")
+    implementation("androidx.test.espresso:espresso-idling-resource:3.5.1")
 
+    implementation("com.arthenica:ffmpeg-kit-full:6.0-2")
 }
