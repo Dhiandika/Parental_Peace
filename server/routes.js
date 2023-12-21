@@ -89,6 +89,7 @@ const {
     deleteTiredResultById,
     deleteAllTiredResults,
 } = require("./handler/hasiltired");
+const { predictAudiokon } = require("./handler/mlrequestkonv");
 
 const routes = [
     // all - Ambil Seluruh Data Database
@@ -461,6 +462,18 @@ const routes = [
         method: "POST",
         path: "/predict-audio",
         handler: predictAudio,
+        options: {
+            payload: {
+                maxBytes: 10485760, // Sesuaikan dengan batas ukuran file audio yang diizinkan
+                multipart: true,
+                output: "stream", 
+            },
+        },
+    },
+    {
+        method: "POST",
+        path: "/predict-audiokon",
+        handler: predictAudiokon,
         options: {
             payload: {
                 maxBytes: 10485760, // Sesuaikan dengan batas ukuran file audio yang diizinkan
