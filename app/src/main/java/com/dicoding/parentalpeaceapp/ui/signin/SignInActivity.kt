@@ -75,9 +75,11 @@ class SignInActivity : AppCompatActivity() {
                         finish()
                         Toast.makeText(this, "SignIn Success", Toast.LENGTH_SHORT).show()
                         val userData = UserModel(
-                            result.data.loginResult.token,
-                            result.data.loginResult.userId,
                             result.data.loginResult.name,
+                            result.data.loginResult.email,
+                            result.data.loginResult.phone,
+                            result.data.loginResult.userId,
+                            result.data.loginResult.token,
                             true)
                         viewModel.saveSession(userData)
                         finish()

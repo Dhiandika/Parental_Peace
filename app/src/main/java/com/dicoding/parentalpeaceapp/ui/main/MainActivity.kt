@@ -11,7 +11,6 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.view.View
-import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -28,9 +27,7 @@ import com.dicoding.parentalpeaceapp.ui.translation.ResultActivity
 import com.dicoding.parentalpeaceapp.ui.ViewModelFactory
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import okhttp3.internal.http2.Http2Reader
 import java.io.File
-import java.io.FileOutputStream
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
@@ -232,7 +229,6 @@ class MainActivity : AppCompatActivity() {
     private fun showRecordingDialog() {
         val dialogView = layoutInflater.inflate(R.layout.recording_dialog, null)
         val timerTextView: TextView = dialogView.findViewById(R.id.timeTextView)
-        val cancelButton: Button = dialogView.findViewById(R.id.cancelButton)
 
         recordingDialog = androidx.appcompat.app.AlertDialog.Builder(this)
             .setView(dialogView)
@@ -261,23 +257,6 @@ class MainActivity : AppCompatActivity() {
             }
         }.start()
 
-        cancelButton.setOnClickListener {
-            // Batalkan rekaman
-            stopRecording()
-
-            // Hapus file rekaman jika sudah ada
-            currentRecordingFileName?.let {
-                val file = File(it)
-                if (file.exists()) {
-                    file.createNewFile()
-                }
-            }
-
-            recordingDialog?.dismiss()
-            isDialogShowing = false
-
-            uploadRecording()
-        }
     }
 
     private fun dismissRecordingDialog() {

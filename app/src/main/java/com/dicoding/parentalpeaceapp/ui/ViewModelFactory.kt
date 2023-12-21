@@ -11,6 +11,7 @@ import com.dicoding.parentalpeaceapp.ui.main.bottomnavigation.home.HomeViewModel
 import com.dicoding.parentalpeaceapp.ui.information.InformationViewModel
 import com.dicoding.parentalpeaceapp.ui.main.MainViewModel
 import com.dicoding.parentalpeaceapp.ui.main.bottomnavigation.other.OtherViewModel
+import com.dicoding.parentalpeaceapp.ui.main.bottomnavigation.profile.ProfileViewModel
 import com.dicoding.parentalpeaceapp.ui.signin.SignInViewModel
 import com.dicoding.parentalpeaceapp.ui.signup.SignUpViewModel
 import com.dicoding.parentalpeaceapp.ui.splash.SplashViewModel
@@ -46,6 +47,9 @@ class ViewModelFactory(private val repository: Repository) : ViewModelProvider.N
             }
             modelClass.isAssignableFrom(OtherViewModel::class.java) -> {
                 OtherViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(ProfileViewModel::class.java) -> {
+                ProfileViewModel(repository) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

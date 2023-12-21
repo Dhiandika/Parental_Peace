@@ -1,45 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="160dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@drawable/result_box_bg"
-    android:padding="16dp">
+    android:backgroundTint="@color/green"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
 
-    <TextView
-        android:id="@+id/tittle_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:layout_gravity="center"
-        android:textSize="24sp"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@android:color/darker_gray"
-        android:layout_centerInParent="true"
-        android:text="Record Baby's Cry" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
 
-    <TextView
-        android:id="@+id/timeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:layout_gravity="center"
-        android:textSize="18sp"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@android:color/darker_gray"
-        android:layout_centerInParent="true"
-        android:text="@string/record_time" />
+        <TextView
+            android:id="@+id/tittle_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingTop="10dp"
+            android:text="Record Baby's Cry"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/cancelButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:background="@drawable/transparant_bg"
-        android:text="@string/end"
-        android:fontFamily="@font/pop_medium"
-        android:layout_below="@id/timeTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"/>
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingTop="10dp"
+            android:text="@string/record_time"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/tittle_dialog"
+            app:layout_constraintStart_toStartOf="@+id/tittle_dialog"
+            app:layout_constraintTop_toBottomOf="@+id/tittle_dialog" />
 
-</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

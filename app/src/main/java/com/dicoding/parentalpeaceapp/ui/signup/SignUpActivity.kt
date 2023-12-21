@@ -91,6 +91,7 @@ class SignUpActivity : AppCompatActivity() {
                     }
                     is Result.Success -> {
                         showLoading(true)
+                        Toast.makeText(this, "Account Created Succesfully", Toast.LENGTH_SHORT).show()
                         viewModel.getSession()
                         startActivity(Intent(this, SignInActivity::class.java))
                     }

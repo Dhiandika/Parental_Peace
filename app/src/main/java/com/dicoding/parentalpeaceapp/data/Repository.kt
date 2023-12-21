@@ -73,9 +73,11 @@ class Repository(
                 val responseLogin = apiService.login(email, password)
                 if (responseLogin.error == false) {
                     val token = UserModel(
-                        token = responseLogin.loginResult.token,
-                        userId = responseLogin.loginResult.userId,
                         name = responseLogin.loginResult.name,
+                        email = responseLogin.loginResult.email,
+                        phone = responseLogin.loginResult.phone,
+                        userId = responseLogin.loginResult.userId,
+                        token = responseLogin.loginResult.token,
                         isLogin = true
                     )
                     ApiConfig.token = responseLogin.loginResult.token
