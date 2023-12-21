@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.dicoding.parentalpeaceapp.data.Repository
 import com.dicoding.parentalpeaceapp.di.Injection
 import com.dicoding.parentalpeaceapp.ui.consultation.ConsultationViewModel
+import com.dicoding.parentalpeaceapp.ui.forgot.ForgotViewModel
 import com.dicoding.parentalpeaceapp.ui.main.bottomnavigation.home.HomeViewModel
 import com.dicoding.parentalpeaceapp.ui.information.InformationViewModel
 import com.dicoding.parentalpeaceapp.ui.main.MainViewModel
@@ -27,6 +28,9 @@ class ViewModelFactory(private val repository: Repository) : ViewModelProvider.N
             }
             modelClass.isAssignableFrom(SignInViewModel::class.java) -> {
                 SignInViewModel(repository) as T
+            }
+            modelClass.isAssignableFrom(ForgotViewModel::class.java) -> {
+                ForgotViewModel(repository) as T
             }
             modelClass.isAssignableFrom(MainViewModel::class.java) -> {
                 MainViewModel(repository) as T

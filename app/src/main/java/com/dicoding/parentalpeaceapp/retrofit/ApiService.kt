@@ -2,6 +2,7 @@ package com.dicoding.parentalpeaceapp.retrofit
 
 import com.dicoding.parentalpeaceapp.response.ArticleResponse
 import com.dicoding.parentalpeaceapp.response.DoctorResponse
+import com.dicoding.parentalpeaceapp.response.ForgotPasswordResponse
 import com.dicoding.parentalpeaceapp.response.RecordUploadResponse
 import com.dicoding.parentalpeaceapp.response.SignInResponse
 import com.dicoding.parentalpeaceapp.response.SignUpResponse
@@ -33,6 +34,12 @@ interface ApiService {
         @Field("email") email: String,
         @Field("password") password: String
     ): SignInResponse
+
+    @FormUrlEncoded
+    @POST("forgot-password")
+    suspend fun forgot(
+        @Field("users_email") email: String
+    ): ForgotPasswordResponse
 
     //uploadrecording
     @Multipart

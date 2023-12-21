@@ -1,7 +1,10 @@
 package com.dicoding.parentalpeaceapp.adapter
 
+import android.app.Activity
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +13,8 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.dicoding.parentalpeaceapp.databinding.DoctorItemBinding
 import com.dicoding.parentalpeaceapp.response.DataDoctorItem
+import com.dicoding.parentalpeaceapp.ui.detailarticle.DetailArticelActivity
+import com.dicoding.parentalpeaceapp.ui.payment.PaymentActivity
 
 class DoctorListAdapter :
     ListAdapter<DataDoctorItem, DoctorListAdapter.MyViewHolder>(DIFF_CALLBACK) {
@@ -26,6 +31,7 @@ class DoctorListAdapter :
 
     class MyViewHolder(private val binding: DoctorItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
         fun bind(data: DataDoctorItem) {
             with(binding) {
                 tvName.text = data.name
@@ -33,6 +39,7 @@ class DoctorListAdapter :
                 tvSpesialis.text = data.specialis
                 tvRating.text = data.rate
                 tvPrice.text = data.harga
+                chatBtn
 
                 val requestOptions = RequestOptions().transform(RoundedCorners(10))
                 Glide.with(itemView.context)
@@ -40,21 +47,21 @@ class DoctorListAdapter :
                     .apply(requestOptions)
                     .into(ivArticles)
 
-/*                itemView.setOnClickListener {
-                    val intent = Intent(itemView.context, DetailArticelActivity::class.java)
-                    intent.putExtra(DetailArticelActivity.DETAIL_ARTICLE, data)
+                binding.chatBtn.setOnClickListener {
+                    val intent = Intent(itemView.context, PaymentActivity::class.java)
+                    intent.putExtra(PaymentActivity.PAYMENT, data)
                     val optionsCompat: ActivityOptionsCompat =
                         ActivityOptionsCompat.makeSceneTransitionAnimation(
                             itemView.context as Activity,
-                            androidx.core.util.Pair(ivArticles, "picture"),
-                            androidx.core.util.Pair(tvTittle, "tittle"),
-                            androidx.core.util.Pair(tvDescription, "description")
+                            androidx.core.util.Pair(chatBtn, "button")
                         )
                     itemView.context.startActivity(intent, optionsCompat.toBundle())
-                }*/
+                }
+
             }
         }
     }
+
 
     companion object {
         private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<DataDoctorItem>() {

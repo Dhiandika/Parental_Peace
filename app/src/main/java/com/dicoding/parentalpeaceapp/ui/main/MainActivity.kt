@@ -214,7 +214,7 @@ class MainActivity : AppCompatActivity() {
                         is Result.Error -> {
                             showToast(result.error ?: "Unknown error occurred")
                             retryUploadRecording()
-                            showLoading(false)
+                            showLoading(true)
                         }
                     }
                 }
@@ -226,7 +226,7 @@ class MainActivity : AppCompatActivity() {
         // Add your retry logic here, for example, using a delay before retrying
         Handler(Looper.getMainLooper()).postDelayed({
             uploadRecording()
-        }, 5000) // Retry after a 5-second delay, adjust as needed
+        }, 2000) // Retry after a 5-second delay, adjust as needed
     }
 
     private fun showRecordingDialog() {
@@ -300,4 +300,5 @@ class MainActivity : AppCompatActivity() {
         }
         mediaRecorder?.release()
     }
+
 }

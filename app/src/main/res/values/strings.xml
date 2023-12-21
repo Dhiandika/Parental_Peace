@@ -68,4 +68,8 @@
     <string name="logout_reminder">You want to Log out?</string>
     <string name="cancel">Cancel</string>
     <string name="not_simmilar">The input is different from the password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="get_url">Get URL</string>
+    <string name="payment">Payment</string>
+    <string name="total_payment">Total Payment</string>
 </resources>

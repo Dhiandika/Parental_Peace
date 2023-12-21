@@ -32,41 +32,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/language_btn"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/buttonother_box_bg"
-        android:contentDescription="@string/logout"
-        android:paddingStart="30dp"
-        android:text="@string/language"
-        android:textAlignment="textStart"
-        android:textAppearance="@style/font14"
-        android:textColor="@color/black_hint2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_other" />
-
-    <Button
-        android:id="@+id/delete_acc_btn"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/buttonother_box_bg"
-        android:contentDescription="@string/logout"
-        android:paddingStart="30dp"
-        android:text="@string/delete_account"
-        android:textAlignment="textStart"
-        android:textAppearance="@style/font14"
-        android:textColor="@color/black_hint2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/language_btn" />
-
-    <Button
         android:id="@+id/logout_btn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@drawable/buttonother_box_bg"
         android:contentDescription="@string/logout"
+        android:layout_marginTop="30dp"
         android:paddingStart="30dp"
         android:text="@string/logout"
         android:textAlignment="textStart"
@@ -74,7 +45,7 @@
         android:textColor="@color/black_hint2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/delete_acc_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/title_other" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

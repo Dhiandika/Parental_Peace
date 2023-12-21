@@ -9,6 +9,7 @@ import com.dicoding.parentalpeaceapp.response.ArticleResponse
 import com.dicoding.parentalpeaceapp.response.DataDoctorItem
 import com.dicoding.parentalpeaceapp.response.DataItem
 import com.dicoding.parentalpeaceapp.response.DoctorResponse
+import com.dicoding.parentalpeaceapp.response.ForgotPasswordResponse
 import com.dicoding.parentalpeaceapp.response.RecordUploadResponse
 import com.dicoding.parentalpeaceapp.response.SignInResponse
 import com.dicoding.parentalpeaceapp.response.SignUpResponse
@@ -93,6 +94,27 @@ class Repository(
             }
     }
 
+    fun forgot(
+        email: String
+    ): LiveData<Result<ForgotPasswordResponse>> = liveData {
+        emit(Result.Loading)
+        try {
+            val forgotResponse = apiService.forgot(email)
+            if (forgotResponse.status == "success") {
+                emit(Result.Success(forgotResponse))
+            } else {
+                emit(Result.Error(forgotResponse.message))
+            }
+        } catch (e: HttpException) {
+            val jsonInString = e.response()?.errorBody()?.string()
+            val errorBody = Gson().fromJson(jsonInString, ForgotPasswordResponse::class.java)
+            val errorMessage = errorBody?.message ?: "An error occurred"
+            emit(Result.Error("Change password failed: ${e.message}"))
+        } catch (e: Exception) {
+            emit(Result.Error("Internet Issues"))
+        }
+    }
+
     fun uploadAudio(audioFile: File)  = liveData {
         emit(Result.Loading)
         val requestAudioFile = audioFile.asRequestBody("audio/acc".toMediaTypeOrNull())
@@ -110,7 +132,7 @@ class Repository(
             emit(Result.Error(errorResponse.status))
         } catch (e: SocketTimeoutException) {
             // Handle timeout exception
-            emit(Result.Error("Connection timeout. Please try again."))
+            emit(Result.Error("Connection timeout. Please Wait a Moment."))
         }
     }
 

@@ -17,6 +17,21 @@
         android:theme="@style/Theme.ParentalPeaceApp"
         tools:targetApi="31">
         <activity
+            android:name=".ui.payment.PaymentActivity"
+            android:launchMode="singleTask"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="myapp" android:host="payment-success" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.forgot.ForgotPwActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.translation.ResultActivity"
             android:exported="false" />
         <activity
@@ -30,9 +45,6 @@
             android:exported="false" />
         <activity
             android:name=".ui.main.bottomnavigation.TransactionHistoryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.FavoriteActivity"
             android:exported="false" />
         <activity
             android:name=".ui.consultation.ConsultationActivity"

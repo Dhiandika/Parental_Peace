@@ -1,18 +1,16 @@
 package com.dicoding.parentalpeaceapp.ui.signin
 
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.WindowInsets
-import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.viewModels
 import com.dicoding.parentalpeaceapp.R
 import com.dicoding.parentalpeaceapp.data.UserModel
 import com.dicoding.parentalpeaceapp.databinding.ActivitySignInBinding
 import com.dicoding.parentalpeaceapp.result.Result
+import com.dicoding.parentalpeaceapp.ui.forgot.ForgotPwActivity
 import com.dicoding.parentalpeaceapp.ui.main.MainActivity
 import com.dicoding.parentalpeaceapp.ui.ViewModelFactory
 import com.dicoding.parentalpeaceapp.ui.signup.SignUpActivity
@@ -32,27 +30,19 @@ class SignInActivity : AppCompatActivity() {
 
         showLoading(false)
 
-        setupView()
         setupAction()
 
         binding.tvSignupClick.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
+
+        binding.forgotPassword.setOnClickListener {
+            val intent = Intent(this, ForgotPwActivity::class.java)
+            startActivity(intent)
+        }
     }
 
-    private fun setupView() {
-        @Suppress("DEPRECATION")
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            window.insetsController?.hide(WindowInsets.Type.statusBars())
-        } else {
-            window.setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN
-            )
-        }
-        supportActionBar?.hide()
-    }
 
     private fun setupAction() {
         binding.btnSignin.setOnClickListener {
