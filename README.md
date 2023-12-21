@@ -28,14 +28,14 @@ Dataset Links of This Project :
 
 ## UI/UX Design
 
-- Link Lo-Fi Design : [Prototype](https://www.figma.com/file/stmmEOu6LeH6BLNDg4UP1a/Baby-Blues-Project-(Copy)?type=design&node-id=0%3A1&mode=design&t=ehEoacbj6koN2Xfp-1)
-- Link Hi-Fi Design : [Wireframe & Mockup](https://www.figma.com/file/stmmEOu6LeH6BLNDg4UP1a/Baby-Blues-Project-(Copy)?type=design&node-id=302-2&mode=design)
-- Link Prototype Design : [Refrensi](https://www.figma.com/file/stmmEOu6LeH6BLNDg4UP1a/Baby-Blues-Project-(Copy)?type=design&node-id=226-2&mode=design)
+- Link Prototype Design : [Prototype](https://www.figma.com/file/stmmEOu6LeH6BLNDg4UP1a/Baby-Blues-Project-(Copy)?type=design&node-id=0%3A1&mode=design&t=ehEoacbj6koN2Xfp-1)
+- Link Wireframe Design : [Wireframe & Mockup](https://www.figma.com/file/stmmEOu6LeH6BLNDg4UP1a/Baby-Blues-Project-(Copy)?type=design&node-id=302-2&mode=design)
+- Link Refrensi Design : [Refrensi](https://www.figma.com/file/stmmEOu6LeH6BLNDg4UP1a/Baby-Blues-Project-(Copy)?type=design&node-id=226-2&mode=design)
 
 ## Deployment Link APK Waras
 
 Download Link APK Waras:<br>
-[Parental Peace APK (Google Drive)](#)
+[Parental Peace APK (Google Drive)](https://drive.google.com/file/d/1RDmRC6NGlbDTh4JpAIyprdZD6Nr7I8Yj/view?usp=sharing)
 
 ## Brand Guidelines
 
