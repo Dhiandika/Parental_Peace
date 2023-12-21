@@ -94,29 +94,15 @@ class SignUpActivity : AppCompatActivity() {
                         Toast.makeText(this, "Account Created Succesfully", Toast.LENGTH_SHORT).show()
                         viewModel.getSession()
                         startActivity(Intent(this, SignInActivity::class.java))
+                        finish()
                     }
                     is Result.Error -> {
                         showLoading(false)
-                        Toast.makeText(this, "Sign Up Failed", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Sign Up Failed, Email Already used", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
         }
-    }
-
-    private fun showDialog(){
-        AlertDialog.Builder(this@SignUpActivity).apply {
-            setTitle("Nice!")
-            setMessage(getString(R.string.regis_succses))
-            setPositiveButton(getString(R.string.next)) { _, _ ->
-                val intent = Intent(context, SignInActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                startActivity(intent)
-                finish()
-            }
-            create()
-            setCancelable(false)
-        }.show()
     }
 
     private fun showLoading(isLoading: Boolean) {

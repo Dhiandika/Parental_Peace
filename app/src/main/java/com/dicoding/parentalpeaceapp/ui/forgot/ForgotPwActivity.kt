@@ -59,7 +59,7 @@ class ForgotPwActivity : AppCompatActivity() {
                     }
                     is Result.Error -> {
                         showLoading(false)
-                        Toast.makeText(this, "Change Passwordfailed", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, "Change Password Failed, Email Not Registed", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
@@ -74,6 +74,7 @@ class ForgotPwActivity : AppCompatActivity() {
                 // Tambahkan logika untuk menghandle klik tombol Continue
                 openBrowserWithLink(resetLink)
                 dialog.dismiss()
+                finish()
             }
 
         val alert = dialogBuilder.create()
