@@ -35,7 +35,7 @@ Dataset Links of This Project :
 ## Deployment Link APK Waras
 
 Download Link APK Waras:<br>
-[Parental Peace APK (Google Drive)](https://drive.google.com/file/d/1RDmRC6NGlbDTh4JpAIyprdZD6Nr7I8Yj/view?usp=sharing)
+[Parental Peace APK (Google Drive)](https://drive.google.com/file/d/1adqRLxBUVVs_xdVxJBCSnZpmX1-V9rDX/view?usp=sharing)
 
 ## Brand Guidelines
 
