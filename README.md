@@ -29,7 +29,7 @@
 ---
 # Website
 
-**[WEBSITE KLIN](https://parental-peace.github.io/)**
+**[WEBSITE Parental Peace](https://parental-peace.github.io/)**
 ## Datasets
 
 Dataset Links of This Project :
