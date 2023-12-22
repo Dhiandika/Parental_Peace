@@ -52,6 +52,14 @@ How to use:
 - If using GoogleDrive for the dataset, GoogleAuth click on the given link and sign in with your Google Account.
 - Done
 
+## Datasets
+
+Dataset Links of This Project :
+
+- [Dataset 1](https://www.kaggle.com/datasets/bhoomikavalani/donateacrycorpusfeaturesdataset)
+- [Dataset 2](https://drive.google.com/drive/folders/12bKrZkGVyNPbtVxI9XMshOCgD-Tyo0jh?usp=sharing)
+
+
 ## Authors by Team ID: `CH2-PS442`
 | Name | Bangkit-ID     | Github-Profile                       |
 | :-------- | :------- | :-------------------------------- |
@@ -61,14 +69,6 @@ How to use:
 | I Putu Dhiandika Aditya Permana      | `C014BSY4164` | [@Dhiandika](https://github.com/Dhiandika) |
 | Yoga Pratama      | `C116BSY4186 ` | [@Yoama2](https://github.com/Yoama2) |
 | I Wayan Priatna      | `A014BSY2686 ` | [@priatna1054](https://github.com/priatna1054) |
-
-
-## Datasets
-
-Dataset Links of This Project :
-
-- [Dataset 1](https://www.kaggle.com/datasets/bhoomikavalani/donateacrycorpusfeaturesdataset)
-- [Dataset 2](https://drive.google.com/drive/folders/12bKrZkGVyNPbtVxI9XMshOCgD-Tyo0jh?usp=sharing)
 
 
 ## UI/UX Design
