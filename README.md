@@ -20,6 +20,13 @@ Machine Learning:
 
 - The model is RNN and LSTM layers model with tensorflow library and keras, initialized and trained from scratch using the provided dataset, saved in a .h5 file and uses mfcc’s for preprocessing the data.
 
+Class 
+- Belly_pain
+- Discomfort
+- Hungry
+- Tired
+- Burping
+  
 Prerequisites
 
 - Jupyter Notebook or Google Colab
