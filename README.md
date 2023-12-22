@@ -18,7 +18,7 @@ There are similar applications already developed by the IPB lecturer that have 9
 
 Machine Learning:
 
-- The model is RNN and LSTM layers model with tensorflow library and keras, initialized and trained from scratch using the provided dataset, saved in a .h5 file and uses mfcc’s for preprocessing the data.
+The model is RNN and LSTM layers model with tensorflow library and keras, initialized and trained from scratch using the provided dataset, saved in a .h5 file and uses mfcc’s for preprocessing the data.
 
 Class 
 - Belly_pain
@@ -29,9 +29,9 @@ Class
 
 Training and Validation Accuracy
 
-![Accuracy](./Asset/4352f9d8-ea08-4869-aeba-7c08b38b0be6.jpg)
+![Accuracy](./Asset/51e05483-0a10-4334-abed-810f2849a344.jpg)
 
-![Accuracy2](./Asset/51e05483-0a10-4334-abed-810f2849a344.jpg)
+![Accuracy2](./Asset/4352f9d8-ea08-4869-aeba-7c08b38b0be6.jpg)
 
 Prerequisites
 
