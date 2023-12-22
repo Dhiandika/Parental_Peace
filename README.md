@@ -44,7 +44,7 @@ Dataset Links of This Project :
 - Link Wireframe Design : [Wireframe & Mockup](https://www.figma.com/file/stmmEOu6LeH6BLNDg4UP1a/Baby-Blues-Project-(Copy)?type=design&node-id=302-2&mode=design)
 - Link Refrensi Design : [Refrensi](https://www.figma.com/file/stmmEOu6LeH6BLNDg4UP1a/Baby-Blues-Project-(Copy)?type=design&node-id=226-2&mode=design)
 
-## Deployment Link APK Waras
+## Deployment Link APK Parental Peace
 
 Download Link APK Parental Peace:<br>
 [Parental Peace APK (Google Drive)](https://drive.google.com/file/d/1adqRLxBUVVs_xdVxJBCSnZpmX1-V9rDX/view?usp=sharing)
