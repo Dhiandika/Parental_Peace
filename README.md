@@ -54,8 +54,8 @@ How to use:
 
 Dataset Links of This Project :
 
-- [Dataset 1](#https://www.kaggle.com/datasets/bhoomikavalani/donateacrycorpusfeaturesdataset)
-- [Dataset 2](#https://drive.google.com/drive/folders/12bKrZkGVyNPbtVxI9XMshOCgD-Tyo0jh?usp=sharing)
+- [Dataset 1](https://www.kaggle.com/datasets/bhoomikavalani/donateacrycorpusfeaturesdataset)
+- [Dataset 2](https://drive.google.com/drive/folders/12bKrZkGVyNPbtVxI9XMshOCgD-Tyo0jh?usp=sharing)
 
 
 ## UI/UX Design
