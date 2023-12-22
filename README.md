@@ -17,13 +17,25 @@
 | Yoga Pratama      | `C116BSY4186 ` | [@Yoama2](https://github.com/Yoama2) |
 | I Wayan Priatna      | `A014BSY2686 ` | [@priatna1054](https://github.com/priatna1054) |
 
+---
+# Tech Stack
 
+| Learning Path      | Tech                                                                                                             | Link Repository                                                       |
+|:-------------------|:-----------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------|
+| Machine Learning   | Jupyter Notebook, Tensorflow, Tensorflow JS, NumPy, Matplotlib, Pandas, OpenCV                                   | **[LINK](https://github.com/Dhiandika/Parental_Peace/tree/ML)**                |
+| Cloud Computing    | Node, NPM, JavaScript, Cloud Run, Firebase, Tensorflow JS, Flask, Python, Postman                                | **[LINK](https://github.com/Dhiandika/Parental_Peace/tree/CC)**                |
+| Mobile Development | Retrofit, Android SDk, Android Support Library, audio                                                          | **[LINK](https://github.com/Dhiandika/Parental_Peace/tree/MD)**                |
+
+---
+# Website
+
+**[WEBSITE KLIN](https://parental-peace.github.io/)**
 ## Datasets
 
 Dataset Links of This Project :
 
-- [Dataset 1](#)
-- [Dataset 2](#)
+- [Dataset 1](https://www.kaggle.com/datasets/bhoomikavalani/donateacrycorpusfeaturesdataset)
+- [Dataset 2](https://drive.google.com/drive/folders/12bKrZkGVyNPbtVxI9XMshOCgD-Tyo0jh?usp=sharing)
 
 
 ## UI/UX Design
