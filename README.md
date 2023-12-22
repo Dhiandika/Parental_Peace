@@ -5,8 +5,16 @@
 # Parental Peace : Reduce Baby Blues by Guidance and Consultation
 
 
-"Parental Peace" adalah aplikasi mobile yang dirancang khusus untuk mendukung orangtua baru dalam perawatan bayi mereka. Aplikasi ini menyediakan berbagai fitur yang memungkinkan pengguna untuk merespons kebutuhan bayi dengan lebih baik, meningkatkan koneksi emosional antara orangtua dan bayi, dan memberikan sumber daya informatif tentang perawatan bayi.
+"Parental Peace" is a mobile application specially designed to support new parents in the care of their babies. The app provides a variety of features that allow users to better respond to the baby's needs, improve the emotional connection between parent and baby, and provide informative resources about baby care.
 
+## Parental Peace Machine Learning Project
+
+Project Background:
+Being a new parent is not an easy matter. When becoming a new parent, a person is faced with tasks that have never been experienced before. Some parents may face challenges in meeting their baby's needs, especially in the early stages of infancy. Common difficulties include interpreting the baby's cries, organizing feeding schedules, and coping with anxiety related to baby care. This includes baby care, breastfeeding or feeding the baby, changing diapers, maintaining hygiene, and making sure that the baby gets enough sleep. In addition, new parents also have to deal with a lack of sleep that can lead to significant physical and mental fatigue.One case often faced by mothers after childbirth is a condition known as the "baby blues." 
+
+Baby blues are a common emotional symptom for mothers within a few days to a few weeks after giving birth. These symptoms include feelings of sadness, anxiety, fatigue, irritability, and unstable mood. Factors that can cause the baby blues include hormonal changes in the body after childbirth, lack of sleep, stress, and adjustment to a new role as a mother. Based on data from the World Health Organization (WHO) in 2017, the number of mothers who give birth around the world experience postpartum blues as much as 300-750 per 1000 mothers. The incidence of postpartum blues in Asia is quite high and varies between 26%-85% and in Indonesia the incidence of Baby Blues Syndrome ranges from 50-70%. To overcome these issues we want to develop a mobile app called “Parental Peace : Reducing Baby Blues by Guidance and Consultation”. This app will create happier, more prosperous and safer communities in Indonesia by reducing the number of baby blues cases, improving mental health, and creating a supportive environment for children and families.
+
+There are similar applications already developed by the IPB lecturer that have 94% accuracy on the Baby Cry detection that is called Madsaz. This application has an interactive design and also good accuracy on it. However, our application has more features that can help parents create a supportive environment for children and families. Parental peace has an additional feature like giving some articles that provide informative information about babies and parents mental health and collaborating with doctors or psychologists to help parents maintain their mental health. 
 ## Authors by Team ID: `CH2-PS442`
 | Name | Bangkit-ID     | Github-Profile                       |
 | :-------- | :------- | :-------------------------------- |
