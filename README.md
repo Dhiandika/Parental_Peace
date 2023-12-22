@@ -7,6 +7,13 @@
 
 "Parental Peace" adalah aplikasi mobile yang dirancang khusus untuk mendukung orangtua baru dalam perawatan bayi mereka. Aplikasi ini menyediakan berbagai fitur yang memungkinkan pengguna untuk merespons kebutuhan bayi dengan lebih baik, meningkatkan koneksi emosional antara orangtua dan bayi, dan memberikan sumber daya informatif tentang perawatan bayi.
 
+## Deployment Link APK Parental Peace
+
+Download Link APK Parental Peace:<br>
+[Parental Peace APK (Google Drive)](https://drive.google.com/file/d/1adqRLxBUVVs_xdVxJBCSnZpmX1-V9rDX/view?usp=sharing)
+
+
+
 ## Authors by Team ID: `CH2-PS442`
 | Name | Bangkit-ID     | Github-Profile                       |
 | :-------- | :------- | :-------------------------------- |
