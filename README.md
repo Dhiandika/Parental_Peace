@@ -18,13 +18,30 @@
 | I Wayan Priatna      | `A014BSY2686 ` | [@priatna1054](https://github.com/priatna1054) |
 
 
-## Datasets
+## Features
+- [x] Welcoming Activity
+- [x] Sign Up
+- [x] Sign In
+- [x] Forgot Password
+- [x] Bottom Navigation
+- [x] Baby's Cry Audio Recording Feature
+- [x] Translation Result Feature
+- [x] Consultation Feature
+- [x] Payment Feature
+- [x] Information Feature
+- [x] Detail Information
+- [x] Profile
 
-Dataset Links of This Project :
-
-- [Dataset 1](#)
-- [Dataset 2](#)
-
+## Screenshots
+<p align="center">
+  <img src="auth.png" width="800">
+</p>
+<p align="center">
+  <img src="fiture.png" width="800">
+</p>
+<p align="center">
+  <img src="fiture3.png" width="800">
+</p>
 
 ## UI/UX Design
 
@@ -32,10 +49,33 @@ Dataset Links of This Project :
 - Link Hi-Fi Design : [Wireframe & Mockup](https://www.figma.com/file/stmmEOu6LeH6BLNDg4UP1a/Baby-Blues-Project-(Copy)?type=design&node-id=302-2&mode=design)
 - Link Prototype Design : [Refrensi](https://www.figma.com/file/stmmEOu6LeH6BLNDg4UP1a/Baby-Blues-Project-(Copy)?type=design&node-id=226-2&mode=design)
 
-## Deployment Link APK Waras
+## Requirement
+* Android Studio Flaminggo
+* Android Device or Android Emulator with minimum SDK 24
+* (Opsional) USB Cable (to Connect Android Device to your Computer)
 
-Download Link APK Waras:<br>
-[Parental Peace APK (Google Drive)](#)
+## Installation
+
+### 1. Clone this Project to your Computer
+```bash
+git clone [https://Bangkit-Capstone-Project/MobileDev_AppsProject.git](https://github.com/Dhiandika/Parental_Peace.git)
+```
+
+and wait until it finish downloaded.
+
+### 2. Open the Project in your Android Studio
+Open Android Studio and select open an existing project, next open the project which you have cloned.
+
+### 3. Run Project in Android Studio
+Wait for Gradle Build to Finish and finally press the `Run > Run ‘app’`. Now the app has been installed in your phone / emulator. Make sure that you have configured your android device or emulator.
+
+## Development Roadmap
+- [x] [Kotlin](https://kotlinlang.org/),
+- [x] [Glide](https://github.com/bumptech/glide),
+- [x] [Retrofit](https://square.github.io/retrofit/),
+- [x] [MediaRecorder](https://developer.android.com/guide/topics/media/mediarecorder?hl=id),
+- [x] [preferences](https://developer.android.com/reference/android/preference/Preference),
+- [x] [Navigation Component](https://developer.android.com/guide/navigation/navigation-getting-started).
 
 ## Brand Guidelines
 
