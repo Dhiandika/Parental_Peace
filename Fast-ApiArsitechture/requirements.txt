@@ -1,0 +1,7 @@
+flask
+tensorflow
+fastapi
+numpy
+Pillow
+waitress
+librosa
