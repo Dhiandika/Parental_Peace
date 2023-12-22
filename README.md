@@ -17,24 +17,27 @@ Baby blues are a common emotional symptom for mothers within a few days to a few
 There are similar applications already developed by the IPB lecturer that have 94% accuracy on the Baby Cry detection that is called Madsaz. This application has an interactive design and also good accuracy on it. However, our application has more features that can help parents create a supportive environment for children and families. Parental peace has an additional feature like giving some articles that provide informative information about babies and parents mental health and collaborating with doctors or psychologists to help parents maintain their mental health. 
 
 Machine Learning:
-The model is RNN and LSTM layers model with tensorflow library and keras, initialized and trained from scratch using the provided dataset, saved in a .h5 file and uses mfcc’s for preprocessing the data.
+
+- The model is RNN and LSTM layers model with tensorflow library and keras, initialized and trained from scratch using the provided dataset, saved in a .h5 file and uses mfcc’s for preprocessing the data.
 
 Prerequisites
-Jupyter Notebook or Google Colab
-Kaggle API Token 
-Python version 3.6 or above
-Latest version of Tensorflow 2.5 (or you can update again by rerunning .ipynb and updating models)
 
-How to use
-Create kaggle.json from Kaggle
-Go to your Kaggle profile then download your Kaggle API.
-My Account → Look for API section → Create New API Token
-Open .ipynb with Google Colaboratory using open in colab
-"Save a copy in Drive" to run and edit with your account. Click File > Save a copy in Drive in your Google Colaboratory.
-Upload your kaggle.json if asked to upload it.
-Will download the dataset on kaggle
-If using GoogleDrive for the dataset, GoogleAuth click on the given link and sign in with your Google Account.
-Done
+- Jupyter Notebook or Google Colab
+- Kaggle API Token 
+- Python version 3.6 or above
+- Latest version of Tensorflow 2.5 (or you can update again by rerunning .ipynb and updating models)
+
+How to use:
+
+- Create kaggle.json from Kaggle
+- Go to your Kaggle profile then download your Kaggle API.
+- My Account → Look for API section → Create New API Token
+- Open .ipynb with Google Colaboratory using open in colab
+- "Save a copy in Drive" to run and edit with your account. Click File > Save a copy in Drive in your Google Colaboratory.
+= Upload your kaggle.json if asked to upload it.
+- Will download the dataset on kaggle
+- If using GoogleDrive for the dataset, GoogleAuth click on the given link and sign in with your Google Account.
+- Done
 
 ## Authors by Team ID: `CH2-PS442`
 | Name | Bangkit-ID     | Github-Profile                       |
