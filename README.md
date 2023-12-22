@@ -35,9 +35,9 @@ Training and Validation Accuracy
 
 Prerequisites
 
-- Jupyter Notebook or Google Colab
-- Kaggle API Token 
-- Python version 3.6 or above
+- [Jupyter Notebook](https://test-jupyter.readthedocs.io/en/latest/install.html) or [Google Colab](https://colab.research.google.com/)
+- Kaggle API Token -> [Generate](https://github.com/Kaggle/kaggle-api#api-credentials)
+- [Python](https://www.python.org/downloads/) version 3.6 or above
 - Latest version of Tensorflow 2.5 (or you can update again by rerunning .ipynb and updating models)
 
 How to use:
