@@ -28,7 +28,9 @@ Class
 - Burping
 
 Training and Validation Accuracy
+
 ![Accuracy](./Asset/4352f9d8-ea08-4869-aeba-7c08b38b0be6.jpg)
+
 ![Accuracy2](./Asset/51e05483-0a10-4334-abed-810f2849a344.jpg)
 
 Prerequisites
